@@ -936,17 +936,29 @@ class KungfuSimulatorGUI:
             msg += f'\n以下秘籍未找到: {", ".join(missing)}'
         self.status_var.set(msg)
 
+def get_chinese_font(root):
+    """检测可用的中文字体，优先vivo Sans，回退到微软雅黑/系统默认"""
+    import tkinter.font as tkfont
+    available = tkfont.families(root)
+    # 优先顺序
+    for font_name in ['vivo Sans SC VF', 'vivo Sans SC', 'Microsoft YaHei UI', 'Microsoft YaHei', '微软雅黑', 'SimHei', '黑体', 'SimSun', '宋体']:
+        if font_name in available:
+            return font_name
+    return 'TkDefaultFont'
+
 def main():
     root = tk.Tk()
-    root.option_add('*Font', '{vivo Sans SC VF} 12')
-    root.option_add('*Listbox*Font', '{vivo Sans SC VF} 12')
-    root.option_add('*Entry*Font', '{vivo Sans SC VF} 12')
+    font_name = get_chinese_font(root)
+    print(f'使用字体: {font_name}')
+    root.option_add('*Font', f'{{{font_name}}} 12')
+    root.option_add('*Listbox*Font', f'{{{font_name}}} 12')
+    root.option_add('*Entry*Font', f'{{{font_name}}} 12')
     style = ttk.Style()
-    style.configure('TLabel', font=('vivo Sans SC VF', 12))
-    style.configure('TButton', font=('vivo Sans SC VF', 12))
-    style.configure('TEntry', font=('vivo Sans SC VF', 12))
-    style.configure('Treeview', font=('vivo Sans SC VF', 12), rowheight=28)
-    style.configure('Treeview.Heading', font=('vivo Sans SC VF', 12, 'bold'))
+    style.configure('TLabel', font=(font_name, 12))
+    style.configure('TButton', font=(font_name, 12))
+    style.configure('TEntry', font=(font_name, 12))
+    style.configure('Treeview', font=(font_name, 12), rowheight=28)
+    style.configure('Treeview.Heading', font=(font_name, 12, 'bold'))
     root.minsize(1320, 700)
     app = KungfuSimulatorGUI(root)
     root.mainloop()
