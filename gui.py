@@ -380,8 +380,10 @@ class KungfuSimulatorGUI:
             self.char_states[self._current_char_name] = {
                 'learned': list(self.sim.learned),
                 'washed': list(self.sim.washed),
+                'special_books': list(self.sim.special_books),
                 'level_bonus': self.sim.level_bonus,
                 'assigned': dict(self.sim.assigned),
+                'save_remaining': self.sim.save_remaining_points,
             }
 
     def _restore_char_state(self, char_name):
@@ -390,8 +392,10 @@ class KungfuSimulatorGUI:
         if state:
             self.sim.learned = list(state['learned'])
             self.sim.washed = list(state['washed'])
+            self.sim.special_books = list(state.get('special_books', []))
             self.sim.level_bonus = state['level_bonus']
             self.sim.assigned = dict(state['assigned'])
+            self.sim.save_remaining_points = state.get('save_remaining', 0)
             return True
         return False
 
@@ -560,14 +564,12 @@ class KungfuSimulatorGUI:
             # 最终值
             self.final_labels[key].config(text=f'= {final_val}')
 
-        # 剩余根骨点(只显示剩余)
-        total = self.sim.get_total_level_points()
+        # 剩余根骨点(存档剩余 + 模拟器升级获得 - 已分配)
         free = self.sim.get_free_level_points()
-        if free > total:
+        if free < 0:
             self.sim._clamp_assigned()
             free = self.sim.get_free_level_points()
-        free = max(0, min(free, total))
-        self.root_points_var.set(str(free))
+        self.root_points_var.set(str(max(0, free)))
 
         # 升级到输入框
         self.level_to_var.set(str(c.level + self.sim.level_bonus))

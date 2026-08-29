@@ -48,6 +48,7 @@ class Simulator:
         self.special_kungfu_names = []  # 特技/天赋名称列表(未映射到秘籍的)
         self.mingyu_total = 0   # 明玉丹数量(额外武功格)
         self.initial_count = 0  # 初始技能数量(不可删除)
+        self.save_remaining_points = 0  # 存档中的剩余根骨值
         self.attr_cap = 999 + (week - 1) * 40       # 属性上限(攻防轻五系)
         self.max_kungfu = 20 + (week - 1) * 2       # 武功格上限
         self.wuchang_cap = 200 + (week - 1) * 30    # 武常上限
@@ -69,13 +70,15 @@ class Simulator:
         return base + bonus
 
     def load_character(self, char):
-        """加载角色"""
+        """加载角色: 从存档读取最终属性, 反推基础属性(减去已学武功和等级加成)"""
         self.current_char = char
         self.learned = []
         self.washed = []
+        self.special_books = []
         self.level_bonus = 0
         self.assigned = {k: 0 for k in ASSIGN_COST.keys()}
-        self.base_attrs = {
+        # 先保存存档中的最终属性
+        final_attrs = {
             '攻击': char.attack,
             '防御': char.defense,
             '轻功': char.dodge,
@@ -98,8 +101,8 @@ class Simulator:
             '攻击带毒': 0,
         }
         # 自动载入已学武功(通过武功编号->秘籍物品编号映射)
-        self.special_kungfu_names = []  # 未映射到秘籍的特技/天赋名称
-        self.initial_count = 0  # 初始技能数量
+        self.special_kungfu_names = []
+        self.initial_count = 0
         if hasattr(char, 'learned_kungfu_ids') and char.learned_kungfu_ids:
             for kid in char.learned_kungfu_ids:
                 item_id = self.kfid_to_itemid.get(kid)
@@ -109,19 +112,33 @@ class Simulator:
                         self.learned.append((kf, 10))
                         self.initial_count += 1
                         continue
-                # 未映射到秘籍的, 作为特技
                 name = getattr(self, 'kfid_to_name', {}).get(kid, f'#{kid}')
                 self.special_kungfu_names.append(name)
         self.special_count = len(self.special_kungfu_names)
-        # 计算明玉丹数量(额外武功格)
-        # 原始主角(称号"惜花六如")固定7颗, 其他按资质
+        # 反推基础属性: 最终属性 - 已学武功加成(10级) - 等级自动加成(每级攻防轻+2)
+        self.base_attrs = dict(final_attrs)
+        # 减去已学武功加成
+        for kf, level in self.learned:
+            if hasattr(kf, 'is_special') and kf.is_special:
+                continue
+            for k, v in kf.bonuses.items():
+                if v != 0:
+                    self.base_attrs[k] = self.base_attrs.get(k, 0) - v * level
+        # 减去等级自动加成(存档等级-1级, 每级攻防轻+2)
+        if char.level > 1:
+            auto_bonus = (char.level - 1) * 2
+            self.base_attrs['攻击'] -= auto_bonus
+            self.base_attrs['防御'] -= auto_bonus
+            self.base_attrs['轻功'] -= auto_bonus
+        # 保存存档中的剩余根骨值, 作为计算基准
+        self.save_remaining_points = getattr(char, 'remaining_points', 0)
+        self.assigned = {k: 0 for k in ASSIGN_COST.keys()}
+        # 计算明玉丹数量
         is_primary = ('惜花六如' in (char.nickname or ''))
         if is_primary:
-            self.mingyu_total = 7  # 原始主角7颗
+            self.mingyu_total = 7
         else:
-            # 复制人主角及队友: 12 - (资质//10)
             self.mingyu_total = max(2, 12 - (char.qualification // 10))
-        # 武功格上限 = 周目上限 + 明玉丹数量
         self.max_kungfu = 20 + (self.week - 1) * 2 + self.mingyu_total
 
     def adjust_level(self, delta):
@@ -144,7 +161,7 @@ class Simulator:
         self.assigned = {k: 0 for k in ASSIGN_COST.keys()}
 
     def get_total_level_points(self):
-        """获取总升级点数"""
+        """获取模拟器升级获得的点数(不包含存档等级)"""
         if not self.current_char or self.level_bonus <= 0:
             return 0
         per = get_level_points_per_level(self.current_char.qualification)
@@ -158,8 +175,8 @@ class Simulator:
         return used
 
     def get_free_level_points(self):
-        """获取剩余升级点数"""
-        return self.get_total_level_points() - self.get_used_level_points()
+        """获取剩余升级点数 = 存档剩余根骨 + 模拟器升级获得 - 模拟器已分配"""
+        return self.save_remaining_points + self.get_total_level_points() - self.get_used_level_points()
 
     def assign_attr(self, attr, points=1):
         """分配自由属性点"""
@@ -314,11 +331,13 @@ class Simulator:
         """计算当前属性（基础+等级+自由分配+武功加成），应用周目上限"""
         attrs = dict(self.base_attrs)
 
-        # 等级自动加成: 每级攻防轻+2
-        if self.level_bonus > 0:
-            attrs['攻击'] += self.level_bonus * 2
-            attrs['防御'] += self.level_bonus * 2
-            attrs['轻功'] += self.level_bonus * 2
+        # 等级自动加成: 存档等级 + 模拟器升级等级, 每级攻防轻+2
+        save_level = max(0, self.current_char.level - 1) if self.current_char else 0
+        total_level_bonus = save_level + self.level_bonus
+        if total_level_bonus > 0:
+            attrs['攻击'] += total_level_bonus * 2
+            attrs['防御'] += total_level_bonus * 2
+            attrs['轻功'] += total_level_bonus * 2
 
         # 自由属性点分配
         for attr, count in self.assigned.items():

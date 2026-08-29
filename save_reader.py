@@ -73,6 +73,7 @@ class Character:
         self.gender = '男'
         self.left_right = False  # 左右互搏
         self.learned_kungfu_ids = []  # 已学武功编号列表
+        self.remaining_points = 0  # 剩余根骨值(升级点数)
         self.raw_offset = 0  # 在R.grp中的偏移
         self.char_index = 0  # 存档索引0-2479
         self.teammate_seq = 0  # 可加入队友表人物编号(u16s[16])
@@ -132,11 +133,27 @@ def parse_r_grp(r_grp_path):
 
     # 动态检测FIRST_OFFSET: 搜索人物总数2480(0x09b0)在头部的位置
     FIRST_OFFSET = 88  # 默认值
+    found_2480 = False
     for off in range(60, 90, 2):
         if off + 2 <= len(data) and struct.unpack_from('<H', data, off)[0] == 2480:
             FIRST_OFFSET = off + 12
+            found_2480 = True
             break
-    print(f'  人物数据起始偏移: {FIRST_OFFSET} (2480在{FIRST_OFFSET-12})')
+    # 备用方案: 初始存档/空存档头部没有2480, 通过搜索已知人物名字反推
+    if not found_2480:
+        # 搜索"胡斐"GBK编码, 胡斐通常是idx=1, 所以FIRST_OFFSET = 胡斐位置 - 322
+        try:
+            hufei_bytes = '胡斐'.encode('gbk')
+            hf_idx = data.find(hufei_bytes, 100, 10000)
+            if hf_idx > 0:
+                # 验证: 胡斐前322字节应该是主角(idx=0)
+                candidate = hf_idx - 322
+                if candidate > 0:
+                    FIRST_OFFSET = candidate
+                    print(f'  备用检测: 胡斐在{hf_idx}, 反推FIRST_OFFSET={FIRST_OFFSET}')
+        except:
+            pass
+    print(f'  人物数据起始偏移: {FIRST_OFFSET}')
 
     # 可加入队友映射: head_to_seq(头像代号->序号), seq_to_name(序号->姓名)
     head_to_seq = {}
@@ -196,15 +213,15 @@ def parse_r_grp(r_grp_path):
             char.nickname = data[nick_start:pos].decode('gbk', errors='ignore').strip()
         except:
             char.nickname = ''
-        # 外号后4字节(性别在第2个u16), 然后是属性
-        gender_val = struct.unpack_from('<H', data, pos + 2)[0] if pos + 4 <= len(data) else 0
+        # 性别在属性数组前4字节的第2个u16 (属性数组固定从offset+22开始)
+        gender_val = struct.unpack_from('<H', data, offset + 20)[0] if offset + 22 <= len(data) else 0
         gender_map = {0: '男', 1: '女', 2: '妖'}
         char.gender = gender_map.get(gender_val, '男')
-        pos += 4
 
-        # 解析属性u16数组
-        if pos + 160 < len(data):
-            u16s = [struct.unpack_from('<H', data, pos + i*2)[0] for i in range(80)]
+        # 解析属性u16数组: 固定从 offset+22 开始
+        attr_start = offset + 22
+        if attr_start + 160 < len(data):
+            u16s = [struct.unpack_from('<H', data, attr_start + i*2)[0] for i in range(80)]
 
             char.level = u16s[0] if u16s[0] > 0 else 1
             char.hp = u16s[2]
@@ -232,7 +249,8 @@ def parse_r_grp(r_grp_path):
             char.sect = u16s[14]
             char.family_name = FAMILY_MAP.get(char.family, '')
             char.sect_name = SECT_MAP.get(char.sect, '')
-            char.teammate_seq = u16s[16]  # 可加入队友表人物编号(0=非可加入队友/NPC)
+            char.teammate_seq = u16s[16]
+            char.remaining_points = u16s[15]  # 剩余根骨值(升级点数)
 
             # 已学武功: u16s[48]开始共30格, 跳过0
             learned = []
@@ -244,8 +262,13 @@ def parse_r_grp(r_grp_path):
 
         # 筛选: 存档索引(idx)就是人物编号, 只保留在可加入队友表中且姓名匹配的
         # idx=编号的数据块是可加入队友版本(初始等级1, 入队后等级会更新), 其他idx的同名人物是NPC
+        # idx=0为主角(含复制人主角), 姓名可能是玩家自定义, 不做姓名匹配强制保留
         expected_name = seq_to_name.get(idx, '').lstrip('&')
-        if expected_name and char.name.lstrip('&') == expected_name:
+        if idx == 0:
+            char.seq = 0
+            char.is_main = True
+            characters.append(char)
+        elif expected_name and char.name.lstrip('&') == expected_name:
             char.seq = idx  # 序号=存档索引=人物编号
             characters.append(char)
 
