@@ -17,7 +17,7 @@ LEVEL_POINTS_TABLE = [
 ASSIGN_COST = {
     '攻击': 1,
     '防御': 2,
-    '轻功': 3,
+    '轻功': 2,
     '拳掌': 6, '御剑': 6, '兵器': 6, '指腿': 6, '暗毒': 6,
 }
 
@@ -49,6 +49,7 @@ class Simulator:
         self.mingyu_total = 0   # 明玉丹数量(额外武功格)
         self.initial_count = 0  # 初始技能数量(不可删除)
         self.save_remaining_points = 0  # 存档中的剩余根骨值
+        self.original_inner_type = None  # 初始内属(用于删除武功后恢复)
         self.attr_cap = 999 + (week - 1) * 40       # 属性上限(攻防轻五系)
         self.max_kungfu = 20 + (week - 1) * 2       # 武功格上限
         self.wuchang_cap = 200 + (week - 1) * 30    # 武常上限
@@ -132,6 +133,7 @@ class Simulator:
             self.base_attrs['轻功'] -= auto_bonus
         # 保存存档中的剩余根骨值, 作为计算基准
         self.save_remaining_points = getattr(char, 'remaining_points', 0)
+        self.original_inner_type = char.inner_type  # 保存初始内属
         self.assigned = {k: 0 for k in ASSIGN_COST.keys()}
         # 计算明玉丹数量
         is_primary = ('惜花六如' in (char.nickname or ''))
@@ -303,10 +305,24 @@ class Simulator:
             self.washed.append((kf, level))
         else:
             self.learned.append((kf, level))
-        # 学习和洗武功后都改变内属
+        # 学习和洗武功后都改变内属(调和是最终态, 只能从阴/阳转调和, 不能反向)
         if hasattr(kf, 'change_inner') and kf.change_inner:
-            self.current_char.inner_type = kf.change_inner
+            if self.current_char.inner_type != '调和':
+                self.current_char.inner_type = kf.change_inner
         return True, '添加成功'
+
+    def _recalc_inner_type(self):
+        """删除武功后重新计算内属: 从初始内属开始, 按顺序应用所有剩余改内属武功"""
+        if self.original_inner_type is None:
+            return
+        cur = self.original_inner_type
+        # 遍历所有已学武功(普通+洗武功+特殊书籍), 按添加顺序
+        all_kf = list(self.learned) + list(self.washed) + list(self.special_books)
+        for kf, lv in all_kf:
+            if hasattr(kf, 'change_inner') and kf.change_inner:
+                if cur != '调和':  # 调和是最终态, 不能反向
+                    cur = kf.change_inner
+        self.current_char.inner_type = cur
 
     def remove_kungfu(self, index, is_washed=False):
         """移除武功"""
@@ -315,6 +331,7 @@ class Simulator:
                 self.washed.pop(index)
             else:
                 self.learned.pop(index)
+            self._recalc_inner_type()
             return True
         except:
             return False
@@ -323,6 +340,7 @@ class Simulator:
         """移除已学特殊书籍(医毒书/宝典)"""
         try:
             self.special_books.pop(index)
+            self._recalc_inner_type()
             return True
         except:
             return False

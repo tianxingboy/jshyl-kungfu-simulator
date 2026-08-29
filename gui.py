@@ -384,6 +384,7 @@ class KungfuSimulatorGUI:
                 'level_bonus': self.sim.level_bonus,
                 'assigned': dict(self.sim.assigned),
                 'save_remaining': self.sim.save_remaining_points,
+                'original_inner': self.sim.original_inner_type,
             }
 
     def _restore_char_state(self, char_name):
@@ -396,6 +397,7 @@ class KungfuSimulatorGUI:
             self.sim.level_bonus = state['level_bonus']
             self.sim.assigned = dict(state['assigned'])
             self.sim.save_remaining_points = state.get('save_remaining', 0)
+            self.sim.original_inner_type = state.get('original_inner', None)
             return True
         return False
 
