@@ -6,7 +6,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from kungfu_db import get_categories, Kungfu
+from kungfu_db import get_categories, Kungfu, save_kungfu_cache, load_kungfu_cache
 from save_reader import load_characters_from_save, parse_characters_from_r_grp, unpack_save, Character, read_save_meta
 from simulator import Simulator
 from item_reader import load_kungfu_from_save
@@ -15,7 +15,7 @@ from kf_mapper import build_map_from_books, load_kfid_name_map
 class KungfuSimulatorGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title('金书红颜录5.60 武功学习规划模拟器')
+        self.root.title('金书红颜录5.60 武功学习规划模拟器 v1.1')
         self.root.geometry('1400x850')
         self.root.minsize(1200, 700)
 
@@ -36,17 +36,25 @@ class KungfuSimulatorGUI:
         print('加载武功编号->名称映射...')
         self.kfid_to_name = load_kfid_name_map()
 
-        if self.default_save:
+        # 秘籍库: 优先从缓存加载, 没有缓存才解包存档解析
+        self.cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kungfu_cache.json')
+        cached = load_kungfu_cache(self.cache_path)
+        if cached:
+            print(f'从缓存加载秘籍库: {len(cached)} 条')
+            self.kungfu_db = cached
+            self.kfid_to_itemid, _ = build_map_from_books(books=cached)
+        elif self.default_save:
             print('从存档读取秘籍库...')
             r_grp, wd = unpack_save(self.default_save, self.unpack_exe)
             self.r_grp_path = r_grp
             self.work_dir = wd
             if r_grp:
                 self.kungfu_db, self.kfid_to_itemid = self._load_books_from_r_grp(r_grp)
+                save_kungfu_cache(self.kungfu_db, self.cache_path)
             else:
                 self.kungfu_db = []
                 self.kfid_to_itemid = {}
-            print(f'加载 {len(self.kungfu_db)} 条秘籍')
+            print(f'加载 {len(self.kungfu_db)} 条秘籍并缓存')
         else:
             print('未找到默认存档, 请点击"读取存档"加载')
             self.kungfu_db = []
@@ -314,25 +322,36 @@ class KungfuSimulatorGUI:
             self._load_save(path)
 
     def _load_save(self, path):
+        import time
+        t0 = time.time()
         self.status_var.set('正在读取存档...')
         self.root.update()
         try:
-            # 解包一次, 复用R.grp分别解析秘籍和人物
+            t1 = time.time()
+            # 解包一次
             r_grp, wd = unpack_save(path, self.unpack_exe)
+            t2 = time.time()
+            unpack_time = t2-t1
             if not r_grp:
                 raise Exception('解包存档失败，未找到R.grp')
             self.r_grp_path = r_grp
             self.work_dir = wd
 
-            # 解析秘籍库
-            self.kungfu_db, self.kfid_to_itemid = self._load_books_from_r_grp(r_grp)
+            # 秘籍库: 已有缓存则复用, 没有才解析(通常不同存档秘籍库相同)
+            if not self.kungfu_db:
+                self.kungfu_db, self.kfid_to_itemid = self._load_books_from_r_grp(r_grp)
+                save_kungfu_cache(self.kungfu_db, self.cache_path)
             self.sim.db = self.kungfu_db
             self.sim.db_by_id = {kf.item_id: kf for kf in self.kungfu_db}
             self.sim.db_by_name = {kf.name: kf for kf in self.kungfu_db}
             self.sim.kfid_to_itemid = self.kfid_to_itemid
 
             # 解析人物(复用已解包的R.grp)
+            t3 = time.time()
             chars = parse_characters_from_r_grp(r_grp)
+            t4 = time.time()
+            parse_time = t4-t3
+            total_time = t4-t0
             self.characters = chars
             self.char_states = {}
             self._current_char_name = None
@@ -359,11 +378,12 @@ class KungfuSimulatorGUI:
             self.sim.wuchang_cap = wc_cap
             self.sim.level_cap = self.sim._calc_level_cap()
             self._refresh_char_list()
-            self.status_var.set(f'已加载 {len(chars)} 个可加入队友, {len(self.kungfu_db)} 条秘籍')
             if chars:
                 self.char_listbox.selection_set(0)
                 self._on_char_select(None)
             self._refresh_kungfu_list()
+            # 计时信息放在最后, 避免被_on_char_select覆盖
+            self.status_var.set(f'已加载 {len(chars)} 人 | 解包{unpack_time:.2f}s 解析{parse_time:.2f}s 共{total_time:.2f}s')
         except Exception as e:
             import traceback
             traceback.print_exc()

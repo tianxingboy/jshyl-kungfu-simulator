@@ -83,22 +83,70 @@ class Character:
         self.sect_name = ''    # 门派名称(从Excel)
         self.is_main = False   # 是否为主角(第一个人物)
 
+# 解包缓存: {zx5_path: (mtime, r_grp_path, work_dir)}
+_unpack_cache = {}
+
 def unpack_save(zx5_path, unpack_exe):
-    """用unpack.exe解包存档，返回R.grp路径"""
-    work_dir = tempfile.mkdtemp(prefix='jshyl_save_')
-    # 复制存档到工作目录
+    """用unpack.exe解包存档，返回R.grp路径(带缓存: 存档未修改则复用)"""
+    global _unpack_cache
+    # 检查缓存
+    try:
+        mtime = os.path.getmtime(zx5_path)
+    except:
+        mtime = 0
+    if zx5_path in _unpack_cache:
+        cached_mtime, cached_r_grp, cached_work = _unpack_cache[zx5_path]
+        if cached_mtime == mtime and os.path.exists(cached_r_grp):
+            return cached_r_grp, cached_work
+
+    # 工作目录: 存档所在目录(打包后初始存档在_internal只读目录, 用临时目录)
+    save_dir = os.path.dirname(os.path.abspath(zx5_path))
     save_name = os.path.basename(zx5_path)
-    dst = os.path.join(work_dir, save_name)
-    shutil.copy2(zx5_path, dst)
-    # 解包
-    result = subprocess.run(
-        [unpack_exe, 'unpack_zx5', save_name],
-        cwd=work_dir, capture_output=True, text=True
-    )
-    # 找R.grp
     base_name = os.path.splitext(save_name)[0]
+    # 检测是否在打包后的只读目录
+    import sys
+    if hasattr(sys, '_MEIPASS') and save_dir.startswith(sys._MEIPASS):
+        import tempfile
+        work_dir = os.path.join(tempfile.gettempdir(), 'jshyl_unpack', base_name)
+        os.makedirs(work_dir, exist_ok=True)
+        # 复制存档到临时目录
+        shutil.copy2(zx5_path, os.path.join(work_dir, save_name))
+    else:
+        work_dir = save_dir
+
+    # 把unpack.exe复制到工作目录再调用(避免打包后从_internal目录调用的杀毒扫描开销)
+    local_unpack = os.path.join(work_dir, 'unpack.exe')
+    if not os.path.exists(local_unpack):
+        try:
+            shutil.copy2(unpack_exe, local_unpack)
+        except:
+            local_unpack = unpack_exe  # 复制失败则用原路径
+
+    # 解包(subprocess + CREATE_NO_WINDOW, 避免打包后创建控制台的开销)
+    CREATE_NO_WINDOW = 0x08000000
+    try:
+        with open(os.devnull, 'w') as devnull:
+            subprocess.run(
+                [local_unpack, 'unpack_zx5', save_name],
+                cwd=work_dir, stdout=devnull, stderr=devnull,
+                creationflags=CREATE_NO_WINDOW
+            )
+    except:
+        # 备用: 原路径调用
+        try:
+            with open(os.devnull, 'w') as devnull:
+                subprocess.run(
+                    [unpack_exe, 'unpack_zx5', save_name],
+                    cwd=work_dir, stdout=devnull, stderr=devnull,
+                    creationflags=CREATE_NO_WINDOW
+                )
+        except:
+            pass
+
+    # 找R.grp
     r_grp = os.path.join(work_dir, base_name, 'save', 'R.grp')
     if os.path.exists(r_grp):
+        _unpack_cache[zx5_path] = (mtime, r_grp, work_dir)
         return r_grp, work_dir
     return None, work_dir
 

@@ -192,3 +192,32 @@ if __name__ == '__main__':
     for kf in db:
         if '雪遁' in kf.name or '太极拳经' in kf.name:
             print(f'  >>> [{kf.category}] +{kf.tier} {kf.name}->{kf.skill_name} 资{kf.qualification} 加成:{kf.bonuses} 需求:{kf.need_skills}')
+
+
+def save_kungfu_cache(kungfu_list, cache_path):
+    """保存秘籍库到JSON缓存"""
+    import json
+    data = []
+    for kf in kungfu_list:
+        item = {k: v for k, v in kf.__dict__.items() if not k.startswith('_')}
+        data.append(item)
+    with open(cache_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False)
+
+def load_kungfu_cache(cache_path):
+    """从JSON缓存加载秘籍库"""
+    import json, os
+    if not os.path.exists(cache_path):
+        return None
+    try:
+        with open(cache_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        result = []
+        for item in data:
+            kf = Kungfu()
+            for k, v in item.items():
+                setattr(kf, k, v)
+            result.append(kf)
+        return result
+    except:
+        return None
