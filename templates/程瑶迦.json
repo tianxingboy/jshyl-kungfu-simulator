@@ -1,0 +1,53 @@
+{
+  "char_name": "程瑶迦",
+  "template_name": "程瑶珈洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 849,
+      "level": 9,
+      "slot": 2,
+      "name": "天武神经4"
+    },
+    {
+      "item_id": 261,
+      "level": 9,
+      "slot": 3,
+      "name": "全真剑法"
+    },
+    {
+      "item_id": 544,
+      "level": 9,
+      "slot": 4,
+      "name": "瞬息千里3"
+    },
+    {
+      "item_id": 920,
+      "level": 9,
+      "slot": 4,
+      "name": "金雁翱翔3"
+    },
+    {
+      "item_id": 547,
+      "level": 9,
+      "slot": 5,
+      "name": "天梯凌云3"
+    },
+    {
+      "item_id": 173,
+      "level": 9,
+      "slot": 6,
+      "name": "三花聚顶掌"
+    },
+    {
+      "item_id": 448,
+      "level": 9,
+      "slot": 7,
+      "name": "万蛇筝音"
+    }
+  ]
+}

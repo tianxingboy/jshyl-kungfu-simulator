@@ -1,0 +1,71 @@
+{
+  "char_name": "马春花",
+  "template_name": "马春花洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 845,
+      "level": 9,
+      "slot": 2,
+      "name": "星河浩渺2"
+    },
+    {
+      "item_id": 726,
+      "level": 9,
+      "slot": 2,
+      "name": "北斗仙踪3"
+    },
+    {
+      "item_id": 168,
+      "level": 9,
+      "slot": 4,
+      "name": "八卦游身掌"
+    },
+    {
+      "item_id": 872,
+      "level": 9,
+      "slot": 4,
+      "name": "狐行四相2"
+    },
+    {
+      "item_id": 674,
+      "level": 9,
+      "slot": 5,
+      "name": "大风云飞掌"
+    },
+    {
+      "item_id": 877,
+      "level": 9,
+      "slot": 5,
+      "name": "化石九转3"
+    },
+    {
+      "item_id": 410,
+      "level": 9,
+      "slot": 6,
+      "name": "回风舞柳剑"
+    },
+    {
+      "item_id": 727,
+      "level": 9,
+      "slot": 6,
+      "name": "惊鸿照影4"
+    },
+    {
+      "item_id": 677,
+      "level": 9,
+      "slot": 7,
+      "name": "七弦无形剑"
+    },
+    {
+      "item_id": 675,
+      "level": 9,
+      "slot": 8,
+      "name": "飞沙走石刀"
+    }
+  ]
+}

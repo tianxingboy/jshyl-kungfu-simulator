@@ -1,0 +1,53 @@
+{
+  "char_name": "殷离",
+  "template_name": "殷离洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 407,
+      "level": 9,
+      "slot": 2,
+      "name": "千蛛万毒手"
+    },
+    {
+      "item_id": 367,
+      "level": 9,
+      "slot": 3,
+      "name": "金刚指"
+    },
+    {
+      "item_id": 586,
+      "level": 9,
+      "slot": 4,
+      "name": "九阳神功5"
+    },
+    {
+      "item_id": 847,
+      "level": 9,
+      "slot": 4,
+      "name": "幻魔迷踪5"
+    },
+    {
+      "item_id": 459,
+      "level": 9,
+      "slot": 5,
+      "name": "蚊须针"
+    },
+    {
+      "item_id": 772,
+      "level": 9,
+      "slot": 5,
+      "name": "灵犀神指"
+    },
+    {
+      "item_id": 464,
+      "level": 9,
+      "slot": 6,
+      "name": "掌心七星钉"
+    }
+  ]
+}

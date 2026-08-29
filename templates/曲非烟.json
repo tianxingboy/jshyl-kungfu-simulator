@@ -1,0 +1,107 @@
+{
+  "char_name": "曲非烟",
+  "template_name": "曲非烟洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 742,
+      "level": 9,
+      "slot": 2,
+      "name": "笑傲江湖曲"
+    },
+    {
+      "item_id": 247,
+      "level": 9,
+      "slot": 2,
+      "name": "华山剑法"
+    },
+    {
+      "item_id": 374,
+      "level": 9,
+      "slot": 2,
+      "name": "葵花神针"
+    },
+    {
+      "item_id": 474,
+      "level": 9,
+      "slot": 3,
+      "name": "百鸟朝凤"
+    },
+    {
+      "item_id": 245,
+      "level": 9,
+      "slot": 3,
+      "name": "泰山十八盘"
+    },
+    {
+      "item_id": 271,
+      "level": 9,
+      "slot": 3,
+      "name": "风雷剑势"
+    },
+    {
+      "item_id": 589,
+      "level": 9,
+      "slot": 3,
+      "name": "葵花真气5"
+    },
+    {
+      "item_id": 534,
+      "level": 9,
+      "slot": 3,
+      "name": "平步青云2"
+    },
+    {
+      "item_id": 475,
+      "level": 9,
+      "slot": 4,
+      "name": "黑血神针"
+    },
+    {
+      "item_id": 250,
+      "level": 9,
+      "slot": 4,
+      "name": "万花剑法"
+    },
+    {
+      "item_id": 852,
+      "level": 9,
+      "slot": 5,
+      "name": "嵩阳神剑"
+    },
+    {
+      "item_id": 301,
+      "level": 9,
+      "slot": 5,
+      "name": "鬼王鞭法"
+    },
+    {
+      "item_id": 254,
+      "level": 9,
+      "slot": 6,
+      "name": "衡山五神剑"
+    },
+    {
+      "item_id": 848,
+      "level": 9,
+      "slot": 6,
+      "name": "忘情天书4"
+    },
+    {
+      "item_id": 360,
+      "level": 9,
+      "slot": 7,
+      "name": "大搜魂手"
+    },
+    {
+      "item_id": 450,
+      "level": 9,
+      "slot": 8,
+      "name": "大搜神针"
+    }
+  ]
+}

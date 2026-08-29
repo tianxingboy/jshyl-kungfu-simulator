@@ -1,0 +1,101 @@
+{
+  "char_name": "袁紫衣",
+  "template_name": "袁紫衣洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 291,
+      "level": 9,
+      "slot": 4,
+      "name": "六合刀法"
+    },
+    {
+      "item_id": 289,
+      "level": 9,
+      "slot": 4,
+      "name": "九龙鞭法"
+    },
+    {
+      "item_id": 141,
+      "level": 9,
+      "slot": 4,
+      "name": "八极拳"
+    },
+    {
+      "item_id": 178,
+      "level": 9,
+      "slot": 4,
+      "name": "百花错拳"
+    },
+    {
+      "item_id": 572,
+      "level": 9,
+      "slot": 4,
+      "name": "佛光普照2"
+    },
+    {
+      "item_id": 293,
+      "level": 9,
+      "slot": 5,
+      "name": "六合枪法"
+    },
+    {
+      "item_id": 240,
+      "level": 9,
+      "slot": 5,
+      "name": "八仙剑法"
+    },
+    {
+      "item_id": 782,
+      "level": 9,
+      "slot": 5,
+      "name": "铜筋铁骨"
+    },
+    {
+      "item_id": 567,
+      "level": 9,
+      "slot": 5,
+      "name": "龟息真定1"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 138,
+      "level": 9,
+      "slot": 6,
+      "name": "赤尻连拳"
+    },
+    {
+      "item_id": 552,
+      "level": 9,
+      "slot": 6,
+      "name": "凌虚飞渡4"
+    },
+    {
+      "item_id": 543,
+      "level": 9,
+      "slot": 7,
+      "name": "天罡梅花2"
+    },
+    {
+      "item_id": 542,
+      "level": 9,
+      "slot": 7,
+      "name": "平沙落雁1"
+    },
+    {
+      "item_id": 325,
+      "level": 9,
+      "slot": 8,
+      "name": "韦陀杵"
+    }
+  ]
+}

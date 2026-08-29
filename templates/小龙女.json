@@ -1,0 +1,107 @@
+{
+  "char_name": "小龙女",
+  "template_name": "小龙女洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 273,
+      "level": 9,
+      "slot": 3,
+      "name": "玉女素心剑"
+    },
+    {
+      "item_id": 261,
+      "level": 9,
+      "slot": 4,
+      "name": "全真剑法"
+    },
+    {
+      "item_id": 579,
+      "level": 9,
+      "slot": 4,
+      "name": "玉女心经3"
+    },
+    {
+      "item_id": 580,
+      "level": 9,
+      "slot": 4,
+      "name": "先天罡气3"
+    },
+    {
+      "item_id": 557,
+      "level": 9,
+      "slot": 4,
+      "name": "夭矫空碧5"
+    },
+    {
+      "item_id": 346,
+      "level": 9,
+      "slot": 5,
+      "name": "狂风迅雷功"
+    },
+    {
+      "item_id": 805,
+      "level": 9,
+      "slot": 5,
+      "name": "七星剑诀"
+    },
+    {
+      "item_id": 582,
+      "level": 9,
+      "slot": 5,
+      "name": "八荒六合5"
+    },
+    {
+      "item_id": 547,
+      "level": 9,
+      "slot": 5,
+      "name": "天梯凌云3"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 309,
+      "level": 9,
+      "slot": 6,
+      "name": "无上大力杵"
+    },
+    {
+      "item_id": 318,
+      "level": 9,
+      "slot": 6,
+      "name": "银索金铃"
+    },
+    {
+      "item_id": 584,
+      "level": 9,
+      "slot": 6,
+      "name": "龙象诸天4"
+    },
+    {
+      "item_id": 587,
+      "level": 9,
+      "slot": 6,
+      "name": "九阴真经5"
+    },
+    {
+      "item_id": 260,
+      "level": 9,
+      "slot": 7,
+      "name": "玉女剑法"
+    },
+    {
+      "item_id": 414,
+      "level": 9,
+      "slot": 7,
+      "name": "龙象般若功"
+    }
+  ]
+}

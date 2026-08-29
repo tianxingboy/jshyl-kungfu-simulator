@@ -1,0 +1,65 @@
+{
+  "char_name": "阿碧",
+  "template_name": "阿碧洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 746,
+      "level": 9,
+      "slot": 3,
+      "name": "三笑逍遥散"
+    },
+    {
+      "item_id": 741,
+      "level": 9,
+      "slot": 3,
+      "name": "梵音普安奏"
+    },
+    {
+      "item_id": 581,
+      "level": 9,
+      "slot": 4,
+      "name": "小无相功4"
+    },
+    {
+      "item_id": 727,
+      "level": 9,
+      "slot": 4,
+      "name": "惊鸿照影4"
+    },
+    {
+      "item_id": 877,
+      "level": 9,
+      "slot": 5,
+      "name": "化石九转3"
+    },
+    {
+      "item_id": 582,
+      "level": 9,
+      "slot": 5,
+      "name": "八荒六合5"
+    },
+    {
+      "item_id": 742,
+      "level": 9,
+      "slot": 6,
+      "name": "笑傲江湖曲"
+    },
+    {
+      "item_id": 743,
+      "level": 9,
+      "slot": 7,
+      "name": "碧海潮生曲"
+    },
+    {
+      "item_id": 448,
+      "level": 9,
+      "slot": 9,
+      "name": "万蛇筝音"
+    }
+  ]
+}

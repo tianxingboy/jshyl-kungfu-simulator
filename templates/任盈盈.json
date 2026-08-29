@@ -1,0 +1,83 @@
+{
+  "char_name": "任盈盈",
+  "template_name": "任盈盈洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 348,
+      "level": 9,
+      "slot": 2,
+      "name": "玄天指"
+    },
+    {
+      "item_id": 677,
+      "level": 9,
+      "slot": 2,
+      "name": "七弦无形剑"
+    },
+    {
+      "item_id": 742,
+      "level": 9,
+      "slot": 3,
+      "name": "笑傲江湖曲"
+    },
+    {
+      "item_id": 271,
+      "level": 9,
+      "slot": 3,
+      "name": "风雷剑势"
+    },
+    {
+      "item_id": 706,
+      "level": 9,
+      "slot": 4,
+      "name": "清音普善咒"
+    },
+    {
+      "item_id": 301,
+      "level": 9,
+      "slot": 5,
+      "name": "鬼王鞭法"
+    },
+    {
+      "item_id": 743,
+      "level": 9,
+      "slot": 5,
+      "name": "碧海潮生曲"
+    },
+    {
+      "item_id": 374,
+      "level": 9,
+      "slot": 5,
+      "name": "葵花神针"
+    },
+    {
+      "item_id": 591,
+      "level": 9,
+      "slot": 6,
+      "name": "吸星大法3"
+    },
+    {
+      "item_id": 589,
+      "level": 9,
+      "slot": 6,
+      "name": "葵花真气5"
+    },
+    {
+      "item_id": 448,
+      "level": 9,
+      "slot": 7,
+      "name": "万蛇筝音"
+    },
+    {
+      "item_id": 848,
+      "level": 9,
+      "slot": 7,
+      "name": "忘情天书4"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "char_name": "阿珂",
+  "template_name": "阿珂洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 359,
+      "level": 9,
+      "slot": 2,
+      "name": "一指禅"
+    },
+    {
+      "item_id": 291,
+      "level": 9,
+      "slot": 2,
+      "name": "六合刀法"
+    },
+    {
+      "item_id": 409,
+      "level": 9,
+      "slot": 2,
+      "name": "一梦红颜曲"
+    },
+    {
+      "item_id": 827,
+      "level": 9,
+      "slot": 2,
+      "name": "玄女剑法"
+    },
+    {
+      "item_id": 297,
+      "level": 9,
+      "slot": 4,
+      "name": "五虎断门刀"
+    },
+    {
+      "item_id": 319,
+      "level": 9,
+      "slot": 4,
+      "name": "百战刀法"
+    },
+    {
+      "item_id": 873,
+      "level": 9,
+      "slot": 4,
+      "name": "少阳玄功2"
+    },
+    {
+      "item_id": 847,
+      "level": 9,
+      "slot": 4,
+      "name": "幻魔迷踪5"
+    },
+    {
+      "item_id": 869,
+      "level": 9,
+      "slot": 5,
+      "name": "飞凤手"
+    },
+    {
+      "item_id": 476,
+      "level": 9,
+      "slot": 5,
+      "name": "含沙射影"
+    },
+    {
+      "item_id": 772,
+      "level": 9,
+      "slot": 5,
+      "name": "灵犀神指"
+    },
+    {
+      "item_id": 777,
+      "level": 9,
+      "slot": 5,
+      "name": "嫁衣神功4"
+    },
+    {
+      "item_id": 555,
+      "level": 9,
+      "slot": 5,
+      "name": "神行百变4"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "char_name": "李文秀",
+  "template_name": "李文秀洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 661,
+      "level": 9,
+      "slot": 2,
+      "name": "青蟒剑"
+    },
+    {
+      "item_id": 313,
+      "level": 9,
+      "slot": 2,
+      "name": "黄沙万里鞭"
+    },
+    {
+      "item_id": 844,
+      "level": 9,
+      "slot": 2,
+      "name": "绵里藏针1"
+    },
+    {
+      "item_id": 443,
+      "level": 9,
+      "slot": 3,
+      "name": "天王补心针"
+    },
+    {
+      "item_id": 298,
+      "level": 9,
+      "slot": 3,
+      "name": "流星锤"
+    },
+    {
+      "item_id": 293,
+      "level": 9,
+      "slot": 4,
+      "name": "六合枪法"
+    }
+  ]
+}

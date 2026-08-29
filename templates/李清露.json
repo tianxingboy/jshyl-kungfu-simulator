@@ -1,0 +1,35 @@
+{
+  "char_name": "李清露",
+  "template_name": "李清露洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 593,
+      "level": 9,
+      "slot": 2,
+      "name": "北冥神功4"
+    },
+    {
+      "item_id": 187,
+      "level": 9,
+      "slot": 3,
+      "name": "白虹掌力"
+    },
+    {
+      "item_id": 365,
+      "level": 9,
+      "slot": 4,
+      "name": "寒袖拂穴"
+    },
+    {
+      "item_id": 581,
+      "level": 9,
+      "slot": 5,
+      "name": "小无相功4"
+    }
+  ]
+}

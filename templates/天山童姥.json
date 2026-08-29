@@ -1,0 +1,35 @@
+{
+  "char_name": "天山童姥",
+  "template_name": "天山童姥洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 418,
+      "level": 9,
+      "slot": 3,
+      "name": "生死符"
+    },
+    {
+      "item_id": 194,
+      "level": 9,
+      "slot": 4,
+      "name": "天山六阳掌"
+    },
+    {
+      "item_id": 373,
+      "level": 9,
+      "slot": 5,
+      "name": "天山折梅手"
+    },
+    {
+      "item_id": 471,
+      "level": 9,
+      "slot": 6,
+      "name": "星丸跳掷"
+    }
+  ]
+}

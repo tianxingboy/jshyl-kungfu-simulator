@@ -1,0 +1,71 @@
+{
+  "char_name": "焦宛儿",
+  "template_name": "焦宛儿洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 295,
+      "level": 9,
+      "slot": 2,
+      "name": "奇门三才刀"
+    },
+    {
+      "item_id": 875,
+      "level": 9,
+      "slot": 2,
+      "name": "百毒真经2"
+    },
+    {
+      "item_id": 302,
+      "level": 9,
+      "slot": 3,
+      "name": "软红蛛索"
+    },
+    {
+      "item_id": 404,
+      "level": 9,
+      "slot": 3,
+      "name": "独臂刀法"
+    },
+    {
+      "item_id": 478,
+      "level": 9,
+      "slot": 3,
+      "name": "雷火神铳"
+    },
+    {
+      "item_id": 827,
+      "level": 9,
+      "slot": 4,
+      "name": "玄女剑法"
+    },
+    {
+      "item_id": 846,
+      "level": 9,
+      "slot": 5,
+      "name": "明神武典5"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 871,
+      "level": 9,
+      "slot": 6,
+      "name": "修罗阴煞功"
+    },
+    {
+      "item_id": 914,
+      "level": 9,
+      "slot": 7,
+      "name": "寒冰神掌"
+    }
+  ]
+}

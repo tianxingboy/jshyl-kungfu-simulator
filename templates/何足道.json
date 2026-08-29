@@ -1,0 +1,23 @@
+{
+  "char_name": "何足道",
+  "template_name": "何足道洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 328,
+      "level": 9,
+      "slot": 2,
+      "name": "金刚伏魔鞭"
+    },
+    {
+      "item_id": 272,
+      "level": 9,
+      "slot": 3,
+      "name": "迅雷剑"
+    }
+  ]
+}

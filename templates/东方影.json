@@ -1,0 +1,89 @@
+{
+  "char_name": "东方影",
+  "template_name": "东方影洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 360,
+      "level": 9,
+      "slot": 4,
+      "name": "大搜魂手"
+    },
+    {
+      "item_id": 450,
+      "level": 9,
+      "slot": 5,
+      "name": "大搜神针"
+    },
+    {
+      "item_id": 589,
+      "level": 9,
+      "slot": 5,
+      "name": "葵花真气5"
+    },
+    {
+      "item_id": 591,
+      "level": 9,
+      "slot": 6,
+      "name": "吸星大法3"
+    },
+    {
+      "item_id": 274,
+      "level": 9,
+      "slot": 7,
+      "name": "玄铁剑法"
+    },
+    {
+      "item_id": 593,
+      "level": 9,
+      "slot": 7,
+      "name": "北冥神功4"
+    },
+    {
+      "item_id": 777,
+      "level": 9,
+      "slot": 8,
+      "name": "嫁衣神功4"
+    },
+    {
+      "item_id": 586,
+      "level": 9,
+      "slot": 8,
+      "name": "九阳神功5"
+    },
+    {
+      "item_id": 679,
+      "level": 9,
+      "slot": 8,
+      "name": "万剑归宗"
+    },
+    {
+      "item_id": 848,
+      "level": 9,
+      "slot": 9,
+      "name": "忘情天书4"
+    },
+    {
+      "item_id": 587,
+      "level": 9,
+      "slot": 9,
+      "name": "九阴真经5"
+    },
+    {
+      "item_id": 588,
+      "level": 9,
+      "slot": 10,
+      "name": "易筋伐髓5"
+    },
+    {
+      "item_id": 594,
+      "level": 9,
+      "slot": 11,
+      "name": "太极神功"
+    }
+  ]
+}

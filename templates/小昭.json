@@ -1,0 +1,47 @@
+{
+  "char_name": "小昭",
+  "template_name": "小昭洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 596,
+      "level": 9,
+      "slot": 3,
+      "name": "乾坤挪移"
+    },
+    {
+      "item_id": 371,
+      "level": 9,
+      "slot": 4,
+      "name": "圣火诀"
+    },
+    {
+      "item_id": 480,
+      "level": 9,
+      "slot": 5,
+      "name": "霹雳雷火弹"
+    },
+    {
+      "item_id": 578,
+      "level": 9,
+      "slot": 5,
+      "name": "圣火万法3"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 192,
+      "level": 9,
+      "slot": 7,
+      "name": "须弥山神掌"
+    }
+  ]
+}

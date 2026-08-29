@@ -1,0 +1,35 @@
+{
+  "char_name": "秦梦瑶",
+  "template_name": "秦梦瑶洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 806,
+      "level": 9,
+      "slot": 3,
+      "name": "彼岸剑诀"
+    },
+    {
+      "item_id": 781,
+      "level": 9,
+      "slot": 4,
+      "name": "剑心通明5"
+    },
+    {
+      "item_id": 905,
+      "level": 9,
+      "slot": 5,
+      "name": "凤飞彩翼5"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    }
+  ]
+}

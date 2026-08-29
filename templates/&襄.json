@@ -1,0 +1,77 @@
+{
+  "char_name": "&襄",
+  "template_name": "襄儿洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 268,
+      "level": 9,
+      "slot": 4,
+      "name": "玉箫剑法"
+    },
+    {
+      "item_id": 584,
+      "level": 9,
+      "slot": 4,
+      "name": "龙象诸天4"
+    },
+    {
+      "item_id": 877,
+      "level": 9,
+      "slot": 4,
+      "name": "化石九转3"
+    },
+    {
+      "item_id": 482,
+      "level": 9,
+      "slot": 5,
+      "name": "弹指神通"
+    },
+    {
+      "item_id": 904,
+      "level": 9,
+      "slot": 5,
+      "name": "瑜珈密乘5"
+    },
+    {
+      "item_id": 593,
+      "level": 9,
+      "slot": 5,
+      "name": "北冥神功4"
+    },
+    {
+      "item_id": 774,
+      "level": 9,
+      "slot": 6,
+      "name": "九韶神剑"
+    },
+    {
+      "item_id": 587,
+      "level": 9,
+      "slot": 6,
+      "name": "九阴真经5"
+    },
+    {
+      "item_id": 727,
+      "level": 9,
+      "slot": 6,
+      "name": "惊鸿照影4"
+    },
+    {
+      "item_id": 595,
+      "level": 9,
+      "slot": 7,
+      "name": "斗转星移"
+    },
+    {
+      "item_id": 572,
+      "level": 9,
+      "slot": 8,
+      "name": "佛光普照2"
+    }
+  ]
+}

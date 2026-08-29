@@ -1,0 +1,107 @@
+{
+  "char_name": "李沅芷",
+  "template_name": "李沅芷洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 454,
+      "level": 9,
+      "slot": 2,
+      "name": "芙蓉金针"
+    },
+    {
+      "item_id": 251,
+      "level": 9,
+      "slot": 2,
+      "name": "追魂夺命剑"
+    },
+    {
+      "item_id": 304,
+      "level": 9,
+      "slot": 3,
+      "name": "八卦刀法"
+    },
+    {
+      "item_id": 175,
+      "level": 9,
+      "slot": 3,
+      "name": "黑砂掌"
+    },
+    {
+      "item_id": 258,
+      "level": 9,
+      "slot": 3,
+      "name": "柔云剑术"
+    },
+    {
+      "item_id": 458,
+      "level": 9,
+      "slot": 4,
+      "name": "子母铁胆"
+    },
+    {
+      "item_id": 343,
+      "level": 9,
+      "slot": 4,
+      "name": "连环迷踪腿"
+    },
+    {
+      "item_id": 353,
+      "level": 9,
+      "slot": 4,
+      "name": "拈花指"
+    },
+    {
+      "item_id": 345,
+      "level": 9,
+      "slot": 4,
+      "name": "九字真言印"
+    },
+    {
+      "item_id": 313,
+      "level": 9,
+      "slot": 4,
+      "name": "黄沙万里鞭"
+    },
+    {
+      "item_id": 901,
+      "level": 9,
+      "slot": 4,
+      "name": "锁骨天佛4"
+    },
+    {
+      "item_id": 783,
+      "level": 9,
+      "slot": 4,
+      "name": "片羽沾衣"
+    },
+    {
+      "item_id": 352,
+      "level": 9,
+      "slot": 5,
+      "name": "天竺佛指"
+    },
+    {
+      "item_id": 792,
+      "level": 9,
+      "slot": 7,
+      "name": "绝户虎爪手"
+    },
+    {
+      "item_id": 158,
+      "level": 9,
+      "slot": 7,
+      "name": "无极玄功拳"
+    },
+    {
+      "item_id": 307,
+      "level": 9,
+      "slot": 8,
+      "name": "玄虚刀法"
+    }
+  ]
+}

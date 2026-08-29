@@ -1,0 +1,53 @@
+{
+  "char_name": "苏荃",
+  "template_name": "苏荃洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 370,
+      "level": 9,
+      "slot": 3,
+      "name": "无相劫指"
+    },
+    {
+      "item_id": 818,
+      "level": 9,
+      "slot": 4,
+      "name": "紫禁皇掌"
+    },
+    {
+      "item_id": 532,
+      "level": 9,
+      "slot": 4,
+      "name": "飞燕回翔2"
+    },
+    {
+      "item_id": 555,
+      "level": 9,
+      "slot": 4,
+      "name": "神行百变4"
+    },
+    {
+      "item_id": 172,
+      "level": 9,
+      "slot": 5,
+      "name": "化骨绵掌"
+    },
+    {
+      "item_id": 478,
+      "level": 9,
+      "slot": 5,
+      "name": "雷火神铳"
+    },
+    {
+      "item_id": 463,
+      "level": 9,
+      "slot": 6,
+      "name": "美人刺"
+    }
+  ]
+}

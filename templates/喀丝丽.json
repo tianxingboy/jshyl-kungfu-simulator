@@ -1,0 +1,71 @@
+{
+  "char_name": "喀丝丽",
+  "template_name": "喀丝丽洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 832,
+      "level": 9,
+      "slot": 3,
+      "name": "铁琵琶手"
+    },
+    {
+      "item_id": 258,
+      "level": 9,
+      "slot": 3,
+      "name": "柔云剑术"
+    },
+    {
+      "item_id": 199,
+      "level": 9,
+      "slot": 3,
+      "name": "天罡开山斧"
+    },
+    {
+      "item_id": 202,
+      "level": 9,
+      "slot": 3,
+      "name": "天山剑法"
+    },
+    {
+      "item_id": 178,
+      "level": 9,
+      "slot": 4,
+      "name": "百花错拳"
+    },
+    {
+      "item_id": 928,
+      "level": 9,
+      "slot": 5,
+      "name": "天山神芒"
+    },
+    {
+      "item_id": 921,
+      "level": 9,
+      "slot": 5,
+      "name": "千幻飘香4"
+    },
+    {
+      "item_id": 785,
+      "level": 9,
+      "slot": 6,
+      "name": "庖丁解牛"
+    },
+    {
+      "item_id": 593,
+      "level": 9,
+      "slot": 7,
+      "name": "北冥神功4"
+    },
+    {
+      "item_id": 535,
+      "level": 9,
+      "slot": 8,
+      "name": "逍遥遨游1"
+    }
+  ]
+}

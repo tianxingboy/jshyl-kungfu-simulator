@@ -1,0 +1,227 @@
+{
+  "char_name": "王语嫣",
+  "template_name": "王语嫣洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 373,
+      "level": 9,
+      "slot": 2,
+      "name": "天山折梅手"
+    },
+    {
+      "item_id": 187,
+      "level": 9,
+      "slot": 3,
+      "name": "白虹掌力"
+    },
+    {
+      "item_id": 180,
+      "level": 9,
+      "slot": 3,
+      "name": "大金刚拳"
+    },
+    {
+      "item_id": 295,
+      "level": 9,
+      "slot": 3,
+      "name": "奇门三才刀"
+    },
+    {
+      "item_id": 356,
+      "level": 9,
+      "slot": 3,
+      "name": "龙爪手"
+    },
+    {
+      "item_id": 874,
+      "level": 9,
+      "slot": 3,
+      "name": "导气归虚2"
+    },
+    {
+      "item_id": 593,
+      "level": 9,
+      "slot": 3,
+      "name": "北冥神功4"
+    },
+    {
+      "item_id": 865,
+      "level": 9,
+      "slot": 4,
+      "name": "疯魔杖法"
+    },
+    {
+      "item_id": 276,
+      "level": 9,
+      "slot": 4,
+      "name": "逍遥神剑"
+    },
+    {
+      "item_id": 365,
+      "level": 9,
+      "slot": 4,
+      "name": "寒袖拂穴"
+    },
+    {
+      "item_id": 813,
+      "level": 9,
+      "slot": 4,
+      "name": "花神十二式"
+    },
+    {
+      "item_id": 581,
+      "level": 9,
+      "slot": 4,
+      "name": "小无相功4"
+    },
+    {
+      "item_id": 725,
+      "level": 9,
+      "slot": 4,
+      "name": "神足摩地3"
+    },
+    {
+      "item_id": 588,
+      "level": 9,
+      "slot": 4,
+      "name": "易筋伐髓5"
+    },
+    {
+      "item_id": 754,
+      "level": 9,
+      "slot": 4,
+      "name": "龙行虎步2"
+    },
+    {
+      "item_id": 727,
+      "level": 9,
+      "slot": 4,
+      "name": "惊鸿照影4"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 4,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 405,
+      "level": 9,
+      "slot": 5,
+      "name": "段家剑"
+    },
+    {
+      "item_id": 187,
+      "level": 9,
+      "slot": 5,
+      "name": "白虹掌力"
+    },
+    {
+      "item_id": 877,
+      "level": 9,
+      "slot": 5,
+      "name": "化石九转3"
+    },
+    {
+      "item_id": 817,
+      "level": 9,
+      "slot": 5,
+      "name": "不死印法"
+    },
+    {
+      "item_id": 589,
+      "level": 9,
+      "slot": 5,
+      "name": "葵花真气5"
+    },
+    {
+      "item_id": 582,
+      "level": 9,
+      "slot": 5,
+      "name": "八荒六合5"
+    },
+    {
+      "item_id": 556,
+      "level": 9,
+      "slot": 5,
+      "name": "凌波微步5"
+    },
+    {
+      "item_id": 657,
+      "level": 9,
+      "slot": 5,
+      "name": "踏月香华5"
+    },
+    {
+      "item_id": 363,
+      "level": 9,
+      "slot": 6,
+      "name": "袈裟伏魔功"
+    },
+    {
+      "item_id": 369,
+      "level": 9,
+      "slot": 6,
+      "name": "一阳指"
+    },
+    {
+      "item_id": 451,
+      "level": 9,
+      "slot": 6,
+      "name": "魔音搜魂"
+    },
+    {
+      "item_id": 806,
+      "level": 9,
+      "slot": 6,
+      "name": "彼岸剑诀"
+    },
+    {
+      "item_id": 412,
+      "level": 9,
+      "slot": 6,
+      "name": "参合指"
+    },
+    {
+      "item_id": 375,
+      "level": 9,
+      "slot": 6,
+      "name": "六脉神剑"
+    },
+    {
+      "item_id": 587,
+      "level": 9,
+      "slot": 6,
+      "name": "九阴真经5"
+    },
+    {
+      "item_id": 227,
+      "level": 9,
+      "slot": 7,
+      "name": "九阴梵纲4"
+    },
+    {
+      "item_id": 781,
+      "level": 9,
+      "slot": 7,
+      "name": "剑心通明5"
+    },
+    {
+      "item_id": 657,
+      "level": 9,
+      "slot": 8,
+      "name": "踏月香华5"
+    },
+    {
+      "item_id": 561,
+      "level": 9,
+      "slot": 9,
+      "name": "一苇渡江5"
+    }
+  ]
+}

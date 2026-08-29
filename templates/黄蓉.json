@@ -1,0 +1,161 @@
+{
+  "char_name": "黄蓉",
+  "template_name": "黄蓉洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 460,
+      "level": 9,
+      "slot": 3,
+      "name": "满天花雨"
+    },
+    {
+      "item_id": 417,
+      "level": 9,
+      "slot": 3,
+      "name": "打狗棒法"
+    },
+    {
+      "item_id": 456,
+      "level": 9,
+      "slot": 4,
+      "name": "飞燕银梭"
+    },
+    {
+      "item_id": 236,
+      "level": 9,
+      "slot": 4,
+      "name": "沐家剑"
+    },
+    {
+      "item_id": 179,
+      "level": 9,
+      "slot": 4,
+      "name": "灵蛇拳"
+    },
+    {
+      "item_id": 535,
+      "level": 9,
+      "slot": 4,
+      "name": "逍遥遨游1"
+    },
+    {
+      "item_id": 137,
+      "level": 9,
+      "slot": 5,
+      "name": "沐家拳"
+    },
+    {
+      "item_id": 743,
+      "level": 9,
+      "slot": 5,
+      "name": "碧海潮生曲"
+    },
+    {
+      "item_id": 213,
+      "level": 9,
+      "slot": 5,
+      "name": "金刚槊舞"
+    },
+    {
+      "item_id": 865,
+      "level": 9,
+      "slot": 5,
+      "name": "疯魔杖法"
+    },
+    {
+      "item_id": 316,
+      "level": 9,
+      "slot": 5,
+      "name": "一阳书指"
+    },
+    {
+      "item_id": 563,
+      "level": 9,
+      "slot": 5,
+      "name": "混世天罡1"
+    },
+    {
+      "item_id": 874,
+      "level": 9,
+      "slot": 5,
+      "name": "导气归虚2"
+    },
+    {
+      "item_id": 544,
+      "level": 9,
+      "slot": 5,
+      "name": "瞬息千里3"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 159,
+      "level": 9,
+      "slot": 6,
+      "name": "莲花掌"
+    },
+    {
+      "item_id": 369,
+      "level": 9,
+      "slot": 6,
+      "name": "一阳指"
+    },
+    {
+      "item_id": 754,
+      "level": 9,
+      "slot": 6,
+      "name": "龙行虎步2"
+    },
+    {
+      "item_id": 331,
+      "level": 9,
+      "slot": 7,
+      "name": "铁帚腿"
+    },
+    {
+      "item_id": 358,
+      "level": 9,
+      "slot": 7,
+      "name": "旋风扫叶腿"
+    },
+    {
+      "item_id": 227,
+      "level": 9,
+      "slot": 7,
+      "name": "九阴梵纲4"
+    },
+    {
+      "item_id": 587,
+      "level": 9,
+      "slot": 7,
+      "name": "九阴真经5"
+    },
+    {
+      "item_id": 333,
+      "level": 9,
+      "slot": 8,
+      "name": "铜锤手"
+    },
+    {
+      "item_id": 548,
+      "level": 9,
+      "slot": 8,
+      "name": "蛇行狸翻3"
+    },
+    {
+      "item_id": 678,
+      "level": 9,
+      "slot": 9,
+      "name": "天星阳极"
+    }
+  ]
+}

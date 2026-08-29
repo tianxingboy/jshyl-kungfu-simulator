@@ -1,0 +1,65 @@
+{
+  "char_name": "沐剑屏",
+  "template_name": "沐剑屏洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 590,
+      "level": 9,
+      "slot": 2,
+      "name": "五尊龙咒"
+    },
+    {
+      "item_id": 213,
+      "level": 9,
+      "slot": 3,
+      "name": "金刚槊舞"
+    },
+    {
+      "item_id": 370,
+      "level": 9,
+      "slot": 4,
+      "name": "无相劫指"
+    },
+    {
+      "item_id": 847,
+      "level": 9,
+      "slot": 4,
+      "name": "幻魔迷踪5"
+    },
+    {
+      "item_id": 355,
+      "level": 9,
+      "slot": 5,
+      "name": "控鹤功"
+    },
+    {
+      "item_id": 476,
+      "level": 9,
+      "slot": 5,
+      "name": "含沙射影"
+    },
+    {
+      "item_id": 772,
+      "level": 9,
+      "slot": 5,
+      "name": "灵犀神指"
+    },
+    {
+      "item_id": 555,
+      "level": 9,
+      "slot": 5,
+      "name": "神行百变4"
+    },
+    {
+      "item_id": 319,
+      "level": 9,
+      "slot": 6,
+      "name": "百战刀法"
+    }
+  ]
+}

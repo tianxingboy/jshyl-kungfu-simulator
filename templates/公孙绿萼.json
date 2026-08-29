@@ -1,0 +1,59 @@
+{
+  "char_name": "公孙绿萼",
+  "template_name": "公孙绿萼洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 468,
+      "level": 9,
+      "slot": 3,
+      "name": "枣核钉"
+    },
+    {
+      "item_id": 441,
+      "level": 9,
+      "slot": 3,
+      "name": "释迦掷象功"
+    },
+    {
+      "item_id": 473,
+      "level": 9,
+      "slot": 3,
+      "name": "冰魄银针"
+    },
+    {
+      "item_id": 579,
+      "level": 9,
+      "slot": 3,
+      "name": "玉女心经3"
+    },
+    {
+      "item_id": 96,
+      "level": 9,
+      "slot": 4,
+      "name": "五毒神掌"
+    },
+    {
+      "item_id": 538,
+      "level": 9,
+      "slot": 4,
+      "name": "蹑空摘星3"
+    },
+    {
+      "item_id": 322,
+      "level": 9,
+      "slot": 5,
+      "name": "云帚拂尘功"
+    },
+    {
+      "item_id": 711,
+      "level": 9,
+      "slot": 6,
+      "name": "三无三不手"
+    }
+  ]
+}

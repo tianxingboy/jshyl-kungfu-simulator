@@ -1,0 +1,53 @@
+{
+  "char_name": "桑飞虹",
+  "template_name": "桑飞虹洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 341,
+      "level": 9,
+      "slot": 3,
+      "name": "铁莲功"
+    },
+    {
+      "item_id": 913,
+      "level": 9,
+      "slot": 3,
+      "name": "佛山无影腿"
+    },
+    {
+      "item_id": 338,
+      "level": 9,
+      "slot": 4,
+      "name": "鸳鸯腿"
+    },
+    {
+      "item_id": 461,
+      "level": 9,
+      "slot": 4,
+      "name": "无影神针"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 343,
+      "level": 9,
+      "slot": 6,
+      "name": "连环迷踪腿"
+    },
+    {
+      "item_id": 358,
+      "level": 9,
+      "slot": 7,
+      "name": "旋风扫叶腿"
+    }
+  ]
+}

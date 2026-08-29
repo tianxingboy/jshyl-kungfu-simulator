@@ -1,0 +1,65 @@
+{
+  "char_name": "程灵素",
+  "template_name": "程灵素洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 449,
+      "level": 9,
+      "slot": 3,
+      "name": "炼心弹"
+    },
+    {
+      "item_id": 569,
+      "level": 9,
+      "slot": 3,
+      "name": "武当九阳2"
+    },
+    {
+      "item_id": 444,
+      "level": 9,
+      "slot": 4,
+      "name": "碧磷针"
+    },
+    {
+      "item_id": 445,
+      "level": 9,
+      "slot": 5,
+      "name": "穿心钉"
+    },
+    {
+      "item_id": 902,
+      "level": 9,
+      "slot": 5,
+      "name": "怜花宝鉴4"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 446,
+      "level": 9,
+      "slot": 6,
+      "name": "极乐刺"
+    },
+    {
+      "item_id": 776,
+      "level": 9,
+      "slot": 6,
+      "name": "小李飞刀"
+    },
+    {
+      "item_id": 447,
+      "level": 9,
+      "slot": 7,
+      "name": "无形粉"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "char_name": "夏青青",
+  "template_name": "夏青青洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 240,
+      "level": 9,
+      "slot": 4,
+      "name": "八仙剑法"
+    },
+    {
+      "item_id": 834,
+      "level": 9,
+      "slot": 4,
+      "name": "醍醐迷烟"
+    },
+    {
+      "item_id": 138,
+      "level": 9,
+      "slot": 5,
+      "name": "赤尻连拳"
+    },
+    {
+      "item_id": 141,
+      "level": 9,
+      "slot": 5,
+      "name": "八极拳"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 404,
+      "level": 9,
+      "slot": 6,
+      "name": "独臂刀法"
+    },
+    {
+      "item_id": 841,
+      "level": 9,
+      "slot": 6,
+      "name": "破玉拳"
+    },
+    {
+      "item_id": 571,
+      "level": 9,
+      "slot": 6,
+      "name": "混元一气2"
+    }
+  ]
+}

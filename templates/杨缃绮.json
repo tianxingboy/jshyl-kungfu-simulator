@@ -1,0 +1,71 @@
+{
+  "char_name": "杨缃绮",
+  "template_name": "杨湘绮洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 170,
+      "level": 9,
+      "slot": 5,
+      "name": "寒冰绵掌"
+    },
+    {
+      "item_id": 744,
+      "level": 9,
+      "slot": 5,
+      "name": "金蚕蛊毒"
+    },
+    {
+      "item_id": 192,
+      "level": 9,
+      "slot": 5,
+      "name": "须弥山神掌"
+    },
+    {
+      "item_id": 372,
+      "level": 9,
+      "slot": 5,
+      "name": "九阴白骨爪"
+    },
+    {
+      "item_id": 578,
+      "level": 9,
+      "slot": 5,
+      "name": "圣火万法3"
+    },
+    {
+      "item_id": 314,
+      "level": 9,
+      "slot": 6,
+      "name": "反两仪刀法"
+    },
+    {
+      "item_id": 326,
+      "level": 9,
+      "slot": 6,
+      "name": "白蟒鞭法"
+    },
+    {
+      "item_id": 896,
+      "level": 9,
+      "slot": 7,
+      "name": "金刚伏魔功"
+    },
+    {
+      "item_id": 548,
+      "level": 9,
+      "slot": 7,
+      "name": "蛇行狸翻3"
+    },
+    {
+      "item_id": 597,
+      "level": 9,
+      "slot": 8,
+      "name": "金刚不坏"
+    }
+  ]
+}

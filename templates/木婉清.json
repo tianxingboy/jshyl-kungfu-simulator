@@ -1,0 +1,77 @@
+{
+  "char_name": "木婉清",
+  "template_name": "木婉清洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 303,
+      "level": 9,
+      "slot": 3,
+      "name": "鹤蛇八打"
+    },
+    {
+      "item_id": 874,
+      "level": 9,
+      "slot": 3,
+      "name": "导气归虚2"
+    },
+    {
+      "item_id": 365,
+      "level": 9,
+      "slot": 4,
+      "name": "寒袖拂穴"
+    },
+    {
+      "item_id": 541,
+      "level": 9,
+      "slot": 4,
+      "name": "鹤舞云光2"
+    },
+    {
+      "item_id": 754,
+      "level": 9,
+      "slot": 4,
+      "name": "龙行虎步2"
+    },
+    {
+      "item_id": 727,
+      "level": 9,
+      "slot": 4,
+      "name": "惊鸿照影4"
+    },
+    {
+      "item_id": 405,
+      "level": 9,
+      "slot": 5,
+      "name": "段家剑"
+    },
+    {
+      "item_id": 877,
+      "level": 9,
+      "slot": 5,
+      "name": "化石九转3"
+    },
+    {
+      "item_id": 369,
+      "level": 9,
+      "slot": 6,
+      "name": "一阳指"
+    },
+    {
+      "item_id": 375,
+      "level": 9,
+      "slot": 7,
+      "name": "六脉神剑"
+    },
+    {
+      "item_id": 227,
+      "level": 9,
+      "slot": 7,
+      "name": "九阴梵纲4"
+    }
+  ]
+}

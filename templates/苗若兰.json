@@ -1,0 +1,47 @@
+{
+  "char_name": "苗若兰",
+  "template_name": "苗若兰洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 741,
+      "level": 9,
+      "slot": 3,
+      "name": "梵音普安奏"
+    },
+    {
+      "item_id": 872,
+      "level": 9,
+      "slot": 3,
+      "name": "狐行四相2"
+    },
+    {
+      "item_id": 253,
+      "level": 9,
+      "slot": 4,
+      "name": "苗家剑法"
+    },
+    {
+      "item_id": 742,
+      "level": 9,
+      "slot": 5,
+      "name": "笑傲江湖曲"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 743,
+      "level": 9,
+      "slot": 6,
+      "name": "碧海潮生曲"
+    }
+  ]
+}

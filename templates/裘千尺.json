@@ -1,0 +1,29 @@
+{
+  "char_name": "裘千尺",
+  "template_name": "裘千尺洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 468,
+      "level": 9,
+      "slot": 3,
+      "name": "枣核钉"
+    },
+    {
+      "item_id": 441,
+      "level": 9,
+      "slot": 4,
+      "name": "释迦掷象功"
+    },
+    {
+      "item_id": 538,
+      "level": 9,
+      "slot": 5,
+      "name": "蹑空摘星3"
+    }
+  ]
+}

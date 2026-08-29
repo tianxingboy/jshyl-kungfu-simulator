@@ -1,0 +1,41 @@
+{
+  "char_name": "梅超风",
+  "template_name": "梅若华洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 482,
+      "level": 9,
+      "slot": 4,
+      "name": "弹指神通"
+    },
+    {
+      "item_id": 544,
+      "level": 9,
+      "slot": 4,
+      "name": "瞬息千里3"
+    },
+    {
+      "item_id": 188,
+      "level": 9,
+      "slot": 5,
+      "name": "落英神剑掌"
+    },
+    {
+      "item_id": 552,
+      "level": 9,
+      "slot": 5,
+      "name": "凌虚飞渡4"
+    },
+    {
+      "item_id": 878,
+      "level": 9,
+      "slot": 6,
+      "name": "逝水波澜4"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "char_name": "萧中慧",
+  "template_name": "萧中慧洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 300,
+      "level": 9,
+      "slot": 2,
+      "name": "呼延鞭法"
+    },
+    {
+      "item_id": 291,
+      "level": 9,
+      "slot": 2,
+      "name": "六合刀法"
+    },
+    {
+      "item_id": 537,
+      "level": 9,
+      "slot": 2,
+      "name": "燕子抄水1"
+    },
+    {
+      "item_id": 748,
+      "level": 9,
+      "slot": 3,
+      "name": "夫妻刀法"
+    },
+    {
+      "item_id": 453,
+      "level": 9,
+      "slot": 4,
+      "name": "连珠飞刀"
+    },
+    {
+      "item_id": 571,
+      "level": 9,
+      "slot": 4,
+      "name": "混元一气2"
+    }
+  ]
+}

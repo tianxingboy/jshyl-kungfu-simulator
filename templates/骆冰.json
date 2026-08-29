@@ -1,0 +1,77 @@
+{
+  "char_name": "骆冰",
+  "template_name": "骆冰洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 855,
+      "level": 9,
+      "slot": 3,
+      "name": "鸳鸯刀法"
+    },
+    {
+      "item_id": 258,
+      "level": 9,
+      "slot": 4,
+      "name": "柔云剑术"
+    },
+    {
+      "item_id": 748,
+      "level": 9,
+      "slot": 4,
+      "name": "夫妻刀法"
+    },
+    {
+      "item_id": 930,
+      "level": 9,
+      "slot": 4,
+      "name": "红袖刀"
+    },
+    {
+      "item_id": 901,
+      "level": 9,
+      "slot": 4,
+      "name": "锁骨天佛4"
+    },
+    {
+      "item_id": 783,
+      "level": 9,
+      "slot": 4,
+      "name": "片羽沾衣"
+    },
+    {
+      "item_id": 313,
+      "level": 9,
+      "slot": 5,
+      "name": "黄沙万里鞭"
+    },
+    {
+      "item_id": 454,
+      "level": 9,
+      "slot": 5,
+      "name": "芙蓉金针"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 158,
+      "level": 9,
+      "slot": 6,
+      "name": "无极玄功拳"
+    },
+    {
+      "item_id": 307,
+      "level": 9,
+      "slot": 7,
+      "name": "玄虚刀法"
+    }
+  ]
+}

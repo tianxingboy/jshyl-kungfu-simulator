@@ -1,0 +1,101 @@
+{
+  "char_name": "赵敏",
+  "template_name": "赵敏洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 270,
+      "level": 9,
+      "slot": 3,
+      "name": "乱披风剑势"
+    },
+    {
+      "item_id": 713,
+      "level": 9,
+      "slot": 4,
+      "name": "搏命三剑"
+    },
+    {
+      "item_id": 367,
+      "level": 9,
+      "slot": 4,
+      "name": "金刚指"
+    },
+    {
+      "item_id": 191,
+      "level": 9,
+      "slot": 4,
+      "name": "玄冥神掌"
+    },
+    {
+      "item_id": 710,
+      "level": 9,
+      "slot": 4,
+      "name": "天魔功极5"
+    },
+    {
+      "item_id": 364,
+      "level": 9,
+      "slot": 5,
+      "name": "散手八扑"
+    },
+    {
+      "item_id": 264,
+      "level": 9,
+      "slot": 5,
+      "name": "两仪剑法"
+    },
+    {
+      "item_id": 772,
+      "level": 9,
+      "slot": 5,
+      "name": "灵犀神指"
+    },
+    {
+      "item_id": 845,
+      "level": 9,
+      "slot": 5,
+      "name": "星河浩渺2"
+    },
+    {
+      "item_id": 847,
+      "level": 9,
+      "slot": 5,
+      "name": "幻魔迷踪5"
+    },
+    {
+      "item_id": 320,
+      "level": 9,
+      "slot": 6,
+      "name": "燎原枪法"
+    },
+    {
+      "item_id": 726,
+      "level": 9,
+      "slot": 6,
+      "name": "北斗仙踪3"
+    },
+    {
+      "item_id": 674,
+      "level": 9,
+      "slot": 7,
+      "name": "大风云飞掌"
+    },
+    {
+      "item_id": 810,
+      "level": 9,
+      "slot": 7,
+      "name": "苍狼战戟"
+    },
+    {
+      "item_id": 903,
+      "level": 9,
+      "slot": 8,
+      "name": "天魔大法5"
+    }
+  ]
+}

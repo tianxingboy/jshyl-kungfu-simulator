@@ -1,0 +1,119 @@
+{
+  "char_name": "方湘筠",
+  "template_name": "方湘筠洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 262,
+      "level": 9,
+      "slot": 2,
+      "name": "峨嵋剑法"
+    },
+    {
+      "item_id": 269,
+      "level": 9,
+      "slot": 3,
+      "name": "倚天剑法"
+    },
+    {
+      "item_id": 264,
+      "level": 9,
+      "slot": 4,
+      "name": "两仪剑法"
+    },
+    {
+      "item_id": 569,
+      "level": 9,
+      "slot": 4,
+      "name": "武当九阳2"
+    },
+    {
+      "item_id": 597,
+      "level": 9,
+      "slot": 4,
+      "name": "金刚不坏"
+    },
+    {
+      "item_id": 328,
+      "level": 9,
+      "slot": 5,
+      "name": "金刚伏魔鞭"
+    },
+    {
+      "item_id": 814,
+      "level": 9,
+      "slot": 5,
+      "name": "黄天大法"
+    },
+    {
+      "item_id": 910,
+      "level": 9,
+      "slot": 5,
+      "name": "九玄碧落3"
+    },
+    {
+      "item_id": 572,
+      "level": 9,
+      "slot": 5,
+      "name": "佛光普照2"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 186,
+      "level": 9,
+      "slot": 6,
+      "name": "七伤拳"
+    },
+    {
+      "item_id": 328,
+      "level": 9,
+      "slot": 6,
+      "name": "金刚伏魔鞭"
+    },
+    {
+      "item_id": 909,
+      "level": 9,
+      "slot": 6,
+      "name": "天机棍法"
+    },
+    {
+      "item_id": 573,
+      "level": 9,
+      "slot": 6,
+      "name": "少林九阳2"
+    },
+    {
+      "item_id": 787,
+      "level": 9,
+      "slot": 7,
+      "name": "飘雪穿云掌"
+    },
+    {
+      "item_id": 479,
+      "level": 9,
+      "slot": 7,
+      "name": "狮子吼"
+    },
+    {
+      "item_id": 791,
+      "level": 9,
+      "slot": 8,
+      "name": "截手九式"
+    },
+    {
+      "item_id": 788,
+      "level": 9,
+      "slot": 9,
+      "name": "金顶绵掌"
+    }
+  ]
+}

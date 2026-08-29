@@ -1,0 +1,77 @@
+{
+  "char_name": "蓝凤凰",
+  "template_name": "蓝凤凰洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 300,
+      "level": 9,
+      "slot": 4,
+      "name": "呼延鞭法"
+    },
+    {
+      "item_id": 812,
+      "level": 9,
+      "slot": 4,
+      "name": "缠丝擒拿手"
+    },
+    {
+      "item_id": 296,
+      "level": 9,
+      "slot": 4,
+      "name": "渔叟钩法"
+    },
+    {
+      "item_id": 335,
+      "level": 9,
+      "slot": 4,
+      "name": "无影幻腿"
+    },
+    {
+      "item_id": 858,
+      "level": 9,
+      "slot": 4,
+      "name": "蝎尾鞭法"
+    },
+    {
+      "item_id": 406,
+      "level": 9,
+      "slot": 4,
+      "name": "闪电灵貂"
+    },
+    {
+      "item_id": 143,
+      "level": 9,
+      "slot": 4,
+      "name": "五罗轻烟掌"
+    },
+    {
+      "item_id": 875,
+      "level": 9,
+      "slot": 4,
+      "name": "百毒真经2"
+    },
+    {
+      "item_id": 455,
+      "level": 9,
+      "slot": 5,
+      "name": "梅花袖箭"
+    },
+    {
+      "item_id": 542,
+      "level": 9,
+      "slot": 5,
+      "name": "平沙落雁1"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    }
+  ]
+}

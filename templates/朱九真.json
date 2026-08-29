@@ -1,0 +1,107 @@
+{
+  "char_name": "朱九真",
+  "template_name": "朱九真洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 407,
+      "level": 9,
+      "slot": 2,
+      "name": "千蛛万毒手"
+    },
+    {
+      "item_id": 678,
+      "level": 9,
+      "slot": 2,
+      "name": "天星阳极"
+    },
+    {
+      "item_id": 316,
+      "level": 9,
+      "slot": 3,
+      "name": "一阳书指"
+    },
+    {
+      "item_id": 367,
+      "level": 9,
+      "slot": 4,
+      "name": "金刚指"
+    },
+    {
+      "item_id": 362,
+      "level": 9,
+      "slot": 4,
+      "name": "幻阴指"
+    },
+    {
+      "item_id": 369,
+      "level": 9,
+      "slot": 4,
+      "name": "一阳指"
+    },
+    {
+      "item_id": 794,
+      "level": 9,
+      "slot": 4,
+      "name": "江浪三叠"
+    },
+    {
+      "item_id": 874,
+      "level": 9,
+      "slot": 4,
+      "name": "导气归虚2"
+    },
+    {
+      "item_id": 847,
+      "level": 9,
+      "slot": 4,
+      "name": "幻魔迷踪5"
+    },
+    {
+      "item_id": 295,
+      "level": 9,
+      "slot": 5,
+      "name": "奇门三才刀"
+    },
+    {
+      "item_id": 772,
+      "level": 9,
+      "slot": 5,
+      "name": "灵犀神指"
+    },
+    {
+      "item_id": 754,
+      "level": 9,
+      "slot": 5,
+      "name": "龙行虎步2"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 865,
+      "level": 9,
+      "slot": 6,
+      "name": "疯魔杖法"
+    },
+    {
+      "item_id": 586,
+      "level": 9,
+      "slot": 6,
+      "name": "九阳神功5"
+    },
+    {
+      "item_id": 356,
+      "level": 9,
+      "slot": 7,
+      "name": "龙爪手"
+    }
+  ]
+}

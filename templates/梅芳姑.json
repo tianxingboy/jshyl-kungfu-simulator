@@ -1,0 +1,35 @@
+{
+  "char_name": "梅芳姑",
+  "template_name": "梅芳姑洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 162,
+      "level": 9,
+      "slot": 4,
+      "name": "梅花拳"
+    },
+    {
+      "item_id": 311,
+      "level": 9,
+      "slot": 4,
+      "name": "金龙鞭法"
+    },
+    {
+      "item_id": 408,
+      "level": 9,
+      "slot": 5,
+      "name": "寒梅剑法"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    }
+  ]
+}

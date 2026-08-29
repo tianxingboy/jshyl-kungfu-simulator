@@ -1,0 +1,53 @@
+{
+  "char_name": "白绣",
+  "template_name": "白绣洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 312,
+      "level": 9,
+      "slot": 2,
+      "name": "金乌刀法"
+    },
+    {
+      "item_id": 257,
+      "level": 9,
+      "slot": 3,
+      "name": "雪山剑法"
+    },
+    {
+      "item_id": 568,
+      "level": 9,
+      "slot": 4,
+      "name": "无妄神咒1"
+    },
+    {
+      "item_id": 206,
+      "level": 9,
+      "slot": 4,
+      "name": "冰火炎功2"
+    },
+    {
+      "item_id": 181,
+      "level": 9,
+      "slot": 5,
+      "name": "碧针清掌"
+    },
+    {
+      "item_id": 918,
+      "level": 9,
+      "slot": 5,
+      "name": "飞鸿遁雪1"
+    },
+    {
+      "item_id": 256,
+      "level": 9,
+      "slot": 6,
+      "name": "达摩剑法"
+    }
+  ]
+}

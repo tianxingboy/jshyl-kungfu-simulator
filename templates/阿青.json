@@ -1,0 +1,89 @@
+{
+  "char_name": "阿青",
+  "template_name": "阿青洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 276,
+      "level": 9,
+      "slot": 4,
+      "name": "逍遥神剑"
+    },
+    {
+      "item_id": 669,
+      "level": 9,
+      "slot": 4,
+      "name": "五岳倒为轻"
+    },
+    {
+      "item_id": 853,
+      "level": 9,
+      "slot": 4,
+      "name": "越女神剑"
+    },
+    {
+      "item_id": 707,
+      "level": 9,
+      "slot": 4,
+      "name": "太玄虚箓5"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 4,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 315,
+      "level": 9,
+      "slot": 5,
+      "name": "阴阳倒乱刃"
+    },
+    {
+      "item_id": 670,
+      "level": 9,
+      "slot": 5,
+      "name": "吴钩霜雪明"
+    },
+    {
+      "item_id": 724,
+      "level": 9,
+      "slot": 5,
+      "name": "雪花神剑"
+    },
+    {
+      "item_id": 581,
+      "level": 9,
+      "slot": 5,
+      "name": "小无相功4"
+    },
+    {
+      "item_id": 779,
+      "level": 9,
+      "slot": 5,
+      "name": "长生仙诀5"
+    },
+    {
+      "item_id": 671,
+      "level": 9,
+      "slot": 6,
+      "name": "救赵挥金锤"
+    },
+    {
+      "item_id": 672,
+      "level": 9,
+      "slot": 7,
+      "name": "意气素霓生"
+    },
+    {
+      "item_id": 668,
+      "level": 9,
+      "slot": 8,
+      "name": "三杯吐然诺"
+    }
+  ]
+}

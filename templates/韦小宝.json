@@ -1,0 +1,35 @@
+{
+  "char_name": "韦小宝",
+  "template_name": "韦小宝洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 334,
+      "level": 9,
+      "slot": 2,
+      "name": "慈悲千叶手"
+    },
+    {
+      "item_id": 168,
+      "level": 9,
+      "slot": 3,
+      "name": "八卦游身掌"
+    },
+    {
+      "item_id": 337,
+      "level": 9,
+      "slot": 4,
+      "name": "拈花擒拿手"
+    },
+    {
+      "item_id": 347,
+      "level": 9,
+      "slot": 5,
+      "name": "阴阳磨"
+    }
+  ]
+}

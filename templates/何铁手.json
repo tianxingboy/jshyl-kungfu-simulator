@@ -1,0 +1,29 @@
+{
+  "char_name": "何铁手",
+  "template_name": "何铁手洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 675,
+      "level": 9,
+      "slot": 3,
+      "name": "飞沙走石刀"
+    },
+    {
+      "item_id": 674,
+      "level": 9,
+      "slot": 4,
+      "name": "大风云飞掌"
+    },
+    {
+      "item_id": 410,
+      "level": 9,
+      "slot": 5,
+      "name": "回风舞柳剑"
+    }
+  ]
+}

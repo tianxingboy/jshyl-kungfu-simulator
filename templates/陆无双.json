@@ -1,0 +1,47 @@
+{
+  "char_name": "陆无双",
+  "template_name": "陆无双洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 96,
+      "level": 9,
+      "slot": 2,
+      "name": "五毒神掌"
+    },
+    {
+      "item_id": 579,
+      "level": 9,
+      "slot": 4,
+      "name": "玉女心经3"
+    },
+    {
+      "item_id": 260,
+      "level": 9,
+      "slot": 5,
+      "name": "玉女剑法"
+    },
+    {
+      "item_id": 318,
+      "level": 9,
+      "slot": 6,
+      "name": "银索金铃"
+    },
+    {
+      "item_id": 465,
+      "level": 9,
+      "slot": 7,
+      "name": "玉蜂针"
+    },
+    {
+      "item_id": 721,
+      "level": 9,
+      "slot": 8,
+      "name": "千蜂碎影"
+    }
+  ]
+}

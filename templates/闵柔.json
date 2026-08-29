@@ -1,0 +1,35 @@
+{
+  "char_name": "闵柔",
+  "template_name": "闵柔洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 907,
+      "level": 9,
+      "slot": 3,
+      "name": "玄素双剑"
+    },
+    {
+      "item_id": 908,
+      "level": 9,
+      "slot": 3,
+      "name": "三清玄功2"
+    },
+    {
+      "item_id": 248,
+      "level": 9,
+      "slot": 4,
+      "name": "上清快剑"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    }
+  ]
+}

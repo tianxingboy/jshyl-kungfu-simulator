@@ -1,0 +1,59 @@
+{
+  "char_name": "黛绮丝",
+  "template_name": "黛绮丝洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 596,
+      "level": 9,
+      "slot": 2,
+      "name": "乾坤挪移"
+    },
+    {
+      "item_id": 578,
+      "level": 9,
+      "slot": 3,
+      "name": "圣火万法3"
+    },
+    {
+      "item_id": 371,
+      "level": 9,
+      "slot": 4,
+      "name": "圣火诀"
+    },
+    {
+      "item_id": 317,
+      "level": 9,
+      "slot": 5,
+      "name": "阴风刀"
+    },
+    {
+      "item_id": 186,
+      "level": 9,
+      "slot": 5,
+      "name": "七伤拳"
+    },
+    {
+      "item_id": 470,
+      "level": 9,
+      "slot": 6,
+      "name": "透骨针"
+    },
+    {
+      "item_id": 328,
+      "level": 9,
+      "slot": 6,
+      "name": "金刚伏魔鞭"
+    },
+    {
+      "item_id": 479,
+      "level": 9,
+      "slot": 7,
+      "name": "狮子吼"
+    }
+  ]
+}

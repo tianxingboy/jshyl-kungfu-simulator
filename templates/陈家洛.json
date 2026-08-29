@@ -1,0 +1,41 @@
+{
+  "char_name": "陈家洛",
+  "template_name": "陈家洛洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 785,
+      "level": 9,
+      "slot": 2,
+      "name": "庖丁解牛"
+    },
+    {
+      "item_id": 178,
+      "level": 9,
+      "slot": 3,
+      "name": "百花错拳"
+    },
+    {
+      "item_id": 199,
+      "level": 9,
+      "slot": 4,
+      "name": "天罡开山斧"
+    },
+    {
+      "item_id": 901,
+      "level": 9,
+      "slot": 4,
+      "name": "锁骨天佛4"
+    },
+    {
+      "item_id": 577,
+      "level": 9,
+      "slot": 5,
+      "name": "罗汉伏魔3"
+    }
+  ]
+}

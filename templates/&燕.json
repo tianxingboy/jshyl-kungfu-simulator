@@ -1,0 +1,47 @@
+{
+  "char_name": "&燕",
+  "template_name": "燕儿洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 595,
+      "level": 9,
+      "slot": 4,
+      "name": "斗转星移"
+    },
+    {
+      "item_id": 877,
+      "level": 9,
+      "slot": 5,
+      "name": "化石九转3"
+    },
+    {
+      "item_id": 726,
+      "level": 9,
+      "slot": 6,
+      "name": "北斗仙踪3"
+    },
+    {
+      "item_id": 727,
+      "level": 9,
+      "slot": 7,
+      "name": "惊鸿照影4"
+    },
+    {
+      "item_id": 768,
+      "level": 9,
+      "slot": 8,
+      "name": "星璇剑法"
+    },
+    {
+      "item_id": 774,
+      "level": 9,
+      "slot": 9,
+      "name": "九韶神剑"
+    }
+  ]
+}

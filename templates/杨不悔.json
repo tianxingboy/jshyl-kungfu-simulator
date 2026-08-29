@@ -1,0 +1,77 @@
+{
+  "char_name": "杨不悔",
+  "template_name": "杨不悔洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 572,
+      "level": 9,
+      "slot": 2,
+      "name": "佛光普照2"
+    },
+    {
+      "item_id": 262,
+      "level": 9,
+      "slot": 3,
+      "name": "峨嵋剑法"
+    },
+    {
+      "item_id": 790,
+      "level": 9,
+      "slot": 3,
+      "name": "神门十三剑"
+    },
+    {
+      "item_id": 578,
+      "level": 9,
+      "slot": 3,
+      "name": "圣火万法3"
+    },
+    {
+      "item_id": 263,
+      "level": 9,
+      "slot": 4,
+      "name": "绕指柔剑"
+    },
+    {
+      "item_id": 583,
+      "level": 9,
+      "slot": 4,
+      "name": "纯阳无极3"
+    },
+    {
+      "item_id": 896,
+      "level": 9,
+      "slot": 5,
+      "name": "金刚伏魔功"
+    },
+    {
+      "item_id": 357,
+      "level": 9,
+      "slot": 5,
+      "name": "流云飞袖"
+    },
+    {
+      "item_id": 480,
+      "level": 9,
+      "slot": 5,
+      "name": "霹雳雷火弹"
+    },
+    {
+      "item_id": 192,
+      "level": 9,
+      "slot": 6,
+      "name": "须弥山神掌"
+    },
+    {
+      "item_id": 597,
+      "level": 9,
+      "slot": 6,
+      "name": "金刚不坏"
+    }
+  ]
+}

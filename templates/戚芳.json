@@ -1,0 +1,17 @@
+{
+  "char_name": "戚芳",
+  "template_name": "戚芳洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 259,
+      "level": 9,
+      "slot": 2,
+      "name": "连城剑法"
+    }
+  ]
+}

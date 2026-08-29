@@ -1,0 +1,59 @@
+{
+  "char_name": "石中玉",
+  "template_name": "石中玉洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 248,
+      "level": 9,
+      "slot": 2,
+      "name": "上清快剑"
+    },
+    {
+      "item_id": 908,
+      "level": 9,
+      "slot": 3,
+      "name": "三清玄功2"
+    },
+    {
+      "item_id": 845,
+      "level": 9,
+      "slot": 3,
+      "name": "星河浩渺2"
+    },
+    {
+      "item_id": 726,
+      "level": 9,
+      "slot": 4,
+      "name": "北斗仙踪3"
+    },
+    {
+      "item_id": 410,
+      "level": 9,
+      "slot": 5,
+      "name": "回风舞柳剑"
+    },
+    {
+      "item_id": 674,
+      "level": 9,
+      "slot": 7,
+      "name": "大风云飞掌"
+    },
+    {
+      "item_id": 677,
+      "level": 9,
+      "slot": 8,
+      "name": "七弦无形剑"
+    },
+    {
+      "item_id": 675,
+      "level": 9,
+      "slot": 9,
+      "name": "飞沙走石刀"
+    }
+  ]
+}

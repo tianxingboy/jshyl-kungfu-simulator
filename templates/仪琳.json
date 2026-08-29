@@ -1,0 +1,59 @@
+{
+  "char_name": "仪琳",
+  "template_name": "仪琳洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 250,
+      "level": 9,
+      "slot": 2,
+      "name": "万花剑法"
+    },
+    {
+      "item_id": 549,
+      "level": 9,
+      "slot": 2,
+      "name": "螺旋鬼影4"
+    },
+    {
+      "item_id": 165,
+      "level": 9,
+      "slot": 3,
+      "name": "天长掌法"
+    },
+    {
+      "item_id": 842,
+      "level": 9,
+      "slot": 3,
+      "name": "天河剑法"
+    },
+    {
+      "item_id": 239,
+      "level": 9,
+      "slot": 4,
+      "name": "辟邪剑法"
+    },
+    {
+      "item_id": 360,
+      "level": 9,
+      "slot": 4,
+      "name": "大搜魂手"
+    },
+    {
+      "item_id": 450,
+      "level": 9,
+      "slot": 5,
+      "name": "大搜神针"
+    },
+    {
+      "item_id": 848,
+      "level": 9,
+      "slot": 6,
+      "name": "忘情天书4"
+    }
+  ]
+}

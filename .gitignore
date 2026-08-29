@@ -1,0 +1,17 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# PyInstaller 打包临时文件
+build/
+dist/
+*.spec
+
+# 存档文件(保留初始存档)
+*.zx5
+!jshyl_save0.zx5
+
+# 临时文件
+*.tmp
+*.log

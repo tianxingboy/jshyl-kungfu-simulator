@@ -1,0 +1,53 @@
+{
+  "char_name": "谢破军",
+  "template_name": "主角洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 595,
+      "level": 9,
+      "slot": 3,
+      "name": "斗转星移"
+    },
+    {
+      "item_id": 845,
+      "level": 9,
+      "slot": 4,
+      "name": "星河浩渺2"
+    },
+    {
+      "item_id": 726,
+      "level": 9,
+      "slot": 4,
+      "name": "北斗仙踪3"
+    },
+    {
+      "item_id": 727,
+      "level": 9,
+      "slot": 4,
+      "name": "惊鸿照影4"
+    },
+    {
+      "item_id": 678,
+      "level": 9,
+      "slot": 5,
+      "name": "天星阳极"
+    },
+    {
+      "item_id": 877,
+      "level": 9,
+      "slot": 6,
+      "name": "化石九转3"
+    },
+    {
+      "item_id": 531,
+      "level": 9,
+      "slot": 6,
+      "name": "精忠报国"
+    }
+  ]
+}

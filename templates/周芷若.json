@@ -1,0 +1,77 @@
+{
+  "char_name": "周芷若",
+  "template_name": "周芷若洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 697,
+      "level": 9,
+      "slot": 2,
+      "name": "灭剑绝剑"
+    },
+    {
+      "item_id": 572,
+      "level": 9,
+      "slot": 4,
+      "name": "佛光普照2"
+    },
+    {
+      "item_id": 357,
+      "level": 9,
+      "slot": 5,
+      "name": "流云飞袖"
+    },
+    {
+      "item_id": 787,
+      "level": 9,
+      "slot": 5,
+      "name": "飘雪穿云掌"
+    },
+    {
+      "item_id": 480,
+      "level": 9,
+      "slot": 5,
+      "name": "霹雳雷火弹"
+    },
+    {
+      "item_id": 554,
+      "level": 9,
+      "slot": 5,
+      "name": "银鞍白马4"
+    },
+    {
+      "item_id": 789,
+      "level": 9,
+      "slot": 6,
+      "name": "四象掌法"
+    },
+    {
+      "item_id": 192,
+      "level": 9,
+      "slot": 6,
+      "name": "须弥山神掌"
+    },
+    {
+      "item_id": 788,
+      "level": 9,
+      "slot": 7,
+      "name": "金顶绵掌"
+    },
+    {
+      "item_id": 262,
+      "level": 9,
+      "slot": 8,
+      "name": "峨嵋剑法"
+    },
+    {
+      "item_id": 791,
+      "level": 9,
+      "slot": 9,
+      "name": "截手九式"
+    }
+  ]
+}

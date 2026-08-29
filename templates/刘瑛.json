@@ -1,0 +1,65 @@
+{
+  "char_name": "刘瑛",
+  "template_name": "刘瑛洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 566,
+      "level": 9,
+      "slot": 4,
+      "name": "金关玉锁1"
+    },
+    {
+      "item_id": 874,
+      "level": 9,
+      "slot": 4,
+      "name": "导气归虚2"
+    },
+    {
+      "item_id": 547,
+      "level": 9,
+      "slot": 5,
+      "name": "天梯凌云3"
+    },
+    {
+      "item_id": 173,
+      "level": 9,
+      "slot": 6,
+      "name": "三花聚顶掌"
+    },
+    {
+      "item_id": 405,
+      "level": 9,
+      "slot": 6,
+      "name": "段家剑"
+    },
+    {
+      "item_id": 261,
+      "level": 9,
+      "slot": 7,
+      "name": "全真剑法"
+    },
+    {
+      "item_id": 754,
+      "level": 9,
+      "slot": 7,
+      "name": "龙行虎步2"
+    },
+    {
+      "item_id": 185,
+      "level": 9,
+      "slot": 8,
+      "name": "大伏魔拳"
+    },
+    {
+      "item_id": 550,
+      "level": 9,
+      "slot": 8,
+      "name": "黑沼灵狐4"
+    }
+  ]
+}

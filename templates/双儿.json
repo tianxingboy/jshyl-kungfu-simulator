@@ -1,0 +1,59 @@
+{
+  "char_name": "双儿",
+  "template_name": "双儿洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 744,
+      "level": 9,
+      "slot": 2,
+      "name": "金蚕蛊毒"
+    },
+    {
+      "item_id": 331,
+      "level": 9,
+      "slot": 2,
+      "name": "铁帚腿"
+    },
+    {
+      "item_id": 159,
+      "level": 9,
+      "slot": 3,
+      "name": "莲花掌"
+    },
+    {
+      "item_id": 870,
+      "level": 9,
+      "slot": 3,
+      "name": "铁指诀"
+    },
+    {
+      "item_id": 333,
+      "level": 9,
+      "slot": 4,
+      "name": "铜锤手"
+    },
+    {
+      "item_id": 536,
+      "level": 9,
+      "slot": 4,
+      "name": "移形换位1"
+    },
+    {
+      "item_id": 563,
+      "level": 9,
+      "slot": 5,
+      "name": "混世天罡1"
+    },
+    {
+      "item_id": 450,
+      "level": 9,
+      "slot": 8,
+      "name": "大搜神针"
+    }
+  ]
+}

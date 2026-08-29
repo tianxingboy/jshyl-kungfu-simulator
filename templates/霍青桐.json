@@ -1,0 +1,101 @@
+{
+  "char_name": "霍青桐",
+  "template_name": "霍青桐洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 202,
+      "level": 9,
+      "slot": 3,
+      "name": "天山剑法"
+    },
+    {
+      "item_id": 304,
+      "level": 9,
+      "slot": 4,
+      "name": "八卦刀法"
+    },
+    {
+      "item_id": 199,
+      "level": 9,
+      "slot": 4,
+      "name": "天罡开山斧"
+    },
+    {
+      "item_id": 415,
+      "level": 9,
+      "slot": 4,
+      "name": "降龙十八掌"
+    },
+    {
+      "item_id": 726,
+      "level": 9,
+      "slot": 4,
+      "name": "北斗仙踪3"
+    },
+    {
+      "item_id": 540,
+      "level": 9,
+      "slot": 4,
+      "name": "寒江独钓1"
+    },
+    {
+      "item_id": 674,
+      "level": 9,
+      "slot": 5,
+      "name": "大风云飞掌"
+    },
+    {
+      "item_id": 243,
+      "level": 9,
+      "slot": 5,
+      "name": "三分剑术"
+    },
+    {
+      "item_id": 178,
+      "level": 9,
+      "slot": 5,
+      "name": "百花错拳"
+    },
+    {
+      "item_id": 921,
+      "level": 9,
+      "slot": 5,
+      "name": "千幻飘香4"
+    },
+    {
+      "item_id": 410,
+      "level": 9,
+      "slot": 6,
+      "name": "回风舞柳剑"
+    },
+    {
+      "item_id": 928,
+      "level": 9,
+      "slot": 6,
+      "name": "天山神芒"
+    },
+    {
+      "item_id": 785,
+      "level": 9,
+      "slot": 6,
+      "name": "庖丁解牛"
+    },
+    {
+      "item_id": 593,
+      "level": 9,
+      "slot": 7,
+      "name": "北冥神功4"
+    },
+    {
+      "item_id": 535,
+      "level": 9,
+      "slot": 8,
+      "name": "逍遥遨游1"
+    }
+  ]
+}

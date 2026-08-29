@@ -1,0 +1,113 @@
+{
+  "char_name": "殷素素",
+  "template_name": "殷素素洗武功模板",
+  "description": "基于5.52洗武功一览，包含所有无分支条件且武功库存在的武功。洗武功9级。导入后可手动删除不需要的。",
+  "level_bonus": 0,
+  "assigned": {},
+  "inner_type": "",
+  "learned": [],
+  "washed": [
+    {
+      "item_id": 573,
+      "level": 9,
+      "slot": 2,
+      "name": "少林九阳2"
+    },
+    {
+      "item_id": 170,
+      "level": 9,
+      "slot": 3,
+      "name": "寒冰绵掌"
+    },
+    {
+      "item_id": 569,
+      "level": 9,
+      "slot": 3,
+      "name": "武当九阳2"
+    },
+    {
+      "item_id": 597,
+      "level": 9,
+      "slot": 3,
+      "name": "金刚不坏"
+    },
+    {
+      "item_id": 572,
+      "level": 9,
+      "slot": 4,
+      "name": "佛光普照2"
+    },
+    {
+      "item_id": 594,
+      "level": 9,
+      "slot": 4,
+      "name": "太极神功"
+    },
+    {
+      "item_id": 596,
+      "level": 9,
+      "slot": 4,
+      "name": "乾坤挪移"
+    },
+    {
+      "item_id": 578,
+      "level": 9,
+      "slot": 4,
+      "name": "圣火万法3"
+    },
+    {
+      "item_id": 464,
+      "level": 9,
+      "slot": 5,
+      "name": "掌心七星钉"
+    },
+    {
+      "item_id": 371,
+      "level": 9,
+      "slot": 5,
+      "name": "圣火诀"
+    },
+    {
+      "item_id": 744,
+      "level": 9,
+      "slot": 5,
+      "name": "金蚕蛊毒"
+    },
+    {
+      "item_id": 586,
+      "level": 9,
+      "slot": 5,
+      "name": "九阳神功5"
+    },
+    {
+      "item_id": 354,
+      "level": 9,
+      "slot": 6,
+      "name": "鹰爪擒拿功"
+    },
+    {
+      "item_id": 559,
+      "level": 9,
+      "slot": 6,
+      "name": "踏沙无痕5"
+    },
+    {
+      "item_id": 186,
+      "level": 9,
+      "slot": 7,
+      "name": "七伤拳"
+    },
+    {
+      "item_id": 328,
+      "level": 9,
+      "slot": 7,
+      "name": "金刚伏魔鞭"
+    },
+    {
+      "item_id": 479,
+      "level": 9,
+      "slot": 8,
+      "name": "狮子吼"
+    }
+  ]
+}
