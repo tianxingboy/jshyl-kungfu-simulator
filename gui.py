@@ -7,7 +7,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kungfu_db import get_categories, Kungfu
-from save_reader import load_characters_from_save, unpack_save, Character, read_save_meta
+from save_reader import load_characters_from_save, parse_characters_from_r_grp, unpack_save, Character, read_save_meta
 from simulator import Simulator
 from item_reader import load_kungfu_from_save
 from kf_mapper import build_map_from_books, load_kfid_name_map
@@ -38,7 +38,14 @@ class KungfuSimulatorGUI:
 
         if self.default_save:
             print('从存档读取秘籍库...')
-            self.kungfu_db, self.kfid_to_itemid, self.r_grp_path = self._load_books_from_save(self.default_save)
+            r_grp, wd = unpack_save(self.default_save, self.unpack_exe)
+            self.r_grp_path = r_grp
+            self.work_dir = wd
+            if r_grp:
+                self.kungfu_db, self.kfid_to_itemid = self._load_books_from_r_grp(r_grp)
+            else:
+                self.kungfu_db = []
+                self.kfid_to_itemid = {}
             print(f'加载 {len(self.kungfu_db)} 条秘籍')
         else:
             print('未找到默认存档, 请点击"读取存档"加载')
@@ -287,15 +294,11 @@ class KungfuSimulatorGUI:
         self.bonus_var = tk.StringVar(value='暂无加成')
         ttk.Label(bottom, textvariable=self.bonus_var, font=('TkDefaultFont', 12)).pack(anchor=tk.W)
 
-    def _load_books_from_save(self, save_path):
-        """从存档解包并读取秘籍库"""
-        r_grp, wd = unpack_save(save_path, self.unpack_exe)
-        if not r_grp:
-            raise Exception('解包存档失败，未找到R.grp')
+    def _load_books_from_r_grp(self, r_grp):
+        """从已解包的R.grp读取秘籍库(不解包)"""
         books = load_kungfu_from_save(r_grp, self.kfid_to_name)
         kfid_to_itemid, _ = build_map_from_books(books=books)
-        # 清理临时目录(保留R.grp路径供后续使用)
-        return books, kfid_to_itemid, r_grp
+        return books, kfid_to_itemid
 
     def _load_default_save(self):
         if self.default_save and os.path.exists(self.default_save):
@@ -314,15 +317,22 @@ class KungfuSimulatorGUI:
         self.status_var.set('正在读取存档...')
         self.root.update()
         try:
-            # 重新从存档读取秘籍库
-            self.kungfu_db, self.kfid_to_itemid, self.r_grp_path = self._load_books_from_save(path)
+            # 解包一次, 复用R.grp分别解析秘籍和人物
+            r_grp, wd = unpack_save(path, self.unpack_exe)
+            if not r_grp:
+                raise Exception('解包存档失败，未找到R.grp')
+            self.r_grp_path = r_grp
+            self.work_dir = wd
+
+            # 解析秘籍库
+            self.kungfu_db, self.kfid_to_itemid = self._load_books_from_r_grp(r_grp)
             self.sim.db = self.kungfu_db
             self.sim.db_by_id = {kf.item_id: kf for kf in self.kungfu_db}
             self.sim.db_by_name = {kf.name: kf for kf in self.kungfu_db}
             self.sim.kfid_to_itemid = self.kfid_to_itemid
-            
-            chars, wd = load_characters_from_save(path, self.unpack_exe)
-            self.work_dir = wd
+
+            # 解析人物(复用已解包的R.grp)
+            chars = parse_characters_from_r_grp(r_grp)
             self.characters = chars
             self.char_states = {}
             self._current_char_name = None

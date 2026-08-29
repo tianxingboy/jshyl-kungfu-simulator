@@ -175,15 +175,7 @@ def parse_r_grp(r_grp_path):
         if offset + 4 >= len(data):
             break
 
-        char = Character()
-        char.raw_offset = offset
-        char.char_index = idx  # 存档索引0-2479
-        char.is_main = (idx == 0)
-
-        # 头像代号在名字前8字节
-        char.code = struct.unpack_from('<H', data, offset-8)[0] if offset >= 8 else 0
-
-        # 读名字(GBK, 遇到00停止)
+        # ===== 第一阶段: 只解析名字, 快速筛选 =====
         pos = offset
         name_bytes = b''
         while pos < len(data) and data[pos] != 0 and len(name_bytes) < 12:
@@ -195,14 +187,30 @@ def parse_r_grp(r_grp_path):
                 pos += 1
             else:
                 break
-        char.name = name_bytes.decode('gbk', errors='ignore').strip()
-        if not char.name:
+        name = name_bytes.decode('gbk', errors='ignore').strip()
+        if not name:
             continue
 
-        # 跳过名字后00填充
+        # 快速筛选: idx=0为主角, 其他需匹配可加入队友表姓名
+        expected_name = seq_to_name.get(idx, '').lstrip('&')
+        is_main = (idx == 0)
+        if not is_main and not (expected_name and name.lstrip('&') == expected_name):
+            continue  # 非可加入队友, 跳过完整解析
+
+        # ===== 第二阶段: 匹配成功, 解析完整属性 =====
+        char = Character()
+        char.raw_offset = offset
+        char.char_index = idx
+        char.is_main = is_main
+        char.name = name
+        char.seq = idx
+
+        # 头像代号在名字前8字节
+        char.code = struct.unpack_from('<H', data, offset-8)[0] if offset >= 8 else 0
+
+        # 跳过名字后00填充, 读外号
         while pos < len(data) and data[pos] == 0:
             pos += 1
-        # 读外号(遇到00停止)
         nick_start = pos
         while pos < len(data) and data[pos] != 0:
             if data[pos] >= 0x81 and pos+1 < len(data) and 0x40 <= data[pos+1] <= 0xFE:
@@ -213,16 +221,15 @@ def parse_r_grp(r_grp_path):
             char.nickname = data[nick_start:pos].decode('gbk', errors='ignore').strip()
         except:
             char.nickname = ''
-        # 性别在属性数组前4字节的第2个u16 (属性数组固定从offset+22开始)
-        gender_val = struct.unpack_from('<H', data, offset + 20)[0] if offset + 22 <= len(data) else 0
-        gender_map = {0: '男', 1: '女', 2: '妖'}
-        char.gender = gender_map.get(gender_val, '男')
 
-        # 解析属性u16数组: 固定从 offset+22 开始
+        # 性别
+        gender_val = struct.unpack_from('<H', data, offset + 20)[0] if offset + 22 <= len(data) else 0
+        char.gender = {0: '男', 1: '女', 2: '妖'}.get(gender_val, '男')
+
+        # 解析属性u16数组
         attr_start = offset + 22
         if attr_start + 160 < len(data):
             u16s = [struct.unpack_from('<H', data, attr_start + i*2)[0] for i in range(80)]
-
             char.level = u16s[0] if u16s[0] > 0 else 1
             char.hp = u16s[2]
             char.hp_max = u16s[3]
@@ -230,8 +237,7 @@ def parse_r_grp(r_grp_path):
             char.body = u16s[44]
             char.mp = u16s[26]
             char.mp_max = u16s[27]
-            inner_val = u16s[25]
-            char.inner_type = {0: '阴', 1: '阳', 2: '调和'}.get(inner_val, '阴')
+            char.inner_type = {0: '阴', 1: '阳', 2: '调和'}.get(u16s[25], '阴')
             char.attack = u16s[28]
             char.dodge = u16s[29]
             char.defense = u16s[30]
@@ -250,31 +256,19 @@ def parse_r_grp(r_grp_path):
             char.family_name = FAMILY_MAP.get(char.family, '')
             char.sect_name = SECT_MAP.get(char.sect, '')
             char.teammate_seq = u16s[16]
-            char.remaining_points = u16s[15]  # 剩余根骨值(升级点数)
+            char.remaining_points = u16s[15]
+            # 已学武功: u16s[48]开始共30格
+            char.learned_kungfu_ids = [u16s[i] for i in range(48, 78) if 0 < u16s[i] < 10000]
 
-            # 已学武功: u16s[48]开始共30格, 跳过0
-            learned = []
-            for i in range(48, 78):
-                v = u16s[i]
-                if v > 0 and v < 10000:
-                    learned.append(v)
-            char.learned_kungfu_ids = learned
-
-        # 筛选: 存档索引(idx)就是人物编号, 只保留在可加入队友表中且姓名匹配的
-        # idx=编号的数据块是可加入队友版本(初始等级1, 入队后等级会更新), 其他idx的同名人物是NPC
-        # idx=0为主角(含复制人主角), 姓名可能是玩家自定义, 不做姓名匹配强制保留
-        expected_name = seq_to_name.get(idx, '').lstrip('&')
-        if idx == 0:
-            char.seq = 0
-            char.is_main = True
-            characters.append(char)
-        elif expected_name and char.name.lstrip('&') == expected_name:
-            char.seq = idx  # 序号=存档索引=人物编号
-            characters.append(char)
+        characters.append(char)
 
     print(f'  固定步长遍历2480人, 筛选出可加入队友 {len(characters)} 人(含主角)')
 
     return characters
+
+def parse_characters_from_r_grp(r_grp_path):
+    """从已解包的R.grp加载角色列表(不解包)"""
+    return parse_r_grp(r_grp_path)
 
 def load_characters_from_save(zx5_path, unpack_exe):
     """从存档文件加载角色列表"""
