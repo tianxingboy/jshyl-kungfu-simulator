@@ -3,6 +3,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -355,9 +356,16 @@ class KungfuSimulatorGUI:
             self.characters = chars
             self.char_states = {}
             self._current_char_name = None
+            # 从文件名提取存档编号
+            save_name = os.path.basename(path)
+            save_num = ''
+            m = re.search(r'save(\d+)', save_name)
+            if m:
+                save_num = f'存档{m.group(1)} | '
             # 读取存档元信息(周目/难度)
             meta = read_save_meta(self.r_grp_path)
             self.save_meta = meta
+            self.current_save_num = save_num
             week = meta['week']
             attr_cap = 999 + (week - 1) * 40
             wf_slots = 20 + (week - 1) * 2
@@ -369,7 +377,7 @@ class KungfuSimulatorGUI:
             lvl_cap = lvl_base + lvl_bonus
             # 武功格 = 周目上限 + 明玉丹数量(主角7, 队友按资质)
             wf_slots = 20 + (week - 1) * 2
-            self.meta_var.set(f'{meta["week_name"]} | {meta["difficulty_name"]} | 属性上限{attr_cap} | 武功格{wf_slots}+明玉丹 | 等级上限{lvl_cap}')
+            self.meta_var.set(f'{save_num}{meta["week_name"]} | {meta["difficulty_name"]} | 属性上限{attr_cap} | 武功格{wf_slots}+明玉丹 | 等级上限{lvl_cap}')
             # 更新Simulator周目上限
             self.sim.week = week
             self.sim.tianshu = ts
@@ -382,6 +390,12 @@ class KungfuSimulatorGUI:
                 self.char_listbox.selection_set(0)
                 self._on_char_select(None)
             self._refresh_kungfu_list()
+            # 从文件名提取存档编号
+            save_name = os.path.basename(path)
+            save_num = ''
+            m = re.search(r'save(\d+)', save_name)
+            if m:
+                save_num = f'存档{m.group(1)} | '
             # 计时信息放在最后, 避免被_on_char_select覆盖
             self.status_var.set(f'已加载 {len(chars)} 人 | 解包{unpack_time:.2f}s 解析{parse_time:.2f}s 共{total_time:.2f}s')
         except Exception as e:
@@ -461,7 +475,8 @@ class KungfuSimulatorGUI:
                 ts = 15
                 lvl_cap = 25 + (week - 2) * 5 + min(ts,5)*5 + max(0,min(ts-5,5))*3 + max(0,ts-10)*1
                 my = self.sim.mingyu_total
-                self.meta_var.set(f'{m["week_name"]} | {m["difficulty_name"]} | 属性上限{attr_cap} | 武功格{wf_base}+明玉丹{my} | 等级上限{lvl_cap}')
+                sn = getattr(self, 'current_save_num', '')
+                self.meta_var.set(f'{sn}{m["week_name"]} | {m["difficulty_name"]} | 属性上限{attr_cap} | 武功格{wf_base}+明玉丹{my} | 等级上限{lvl_cap}')
             if restored:
                 self.status_var.set(f'已恢复 {display_name} 的模拟规划')
             else:
